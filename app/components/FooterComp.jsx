@@ -1,19 +1,26 @@
 import { Facebook, Google, Instagram, Twitter } from "@mui/icons-material";
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
 const FooterComp = () => {
   return (
     <Box
-      className="bg-black text-white flex justify-center items-center absolute bottom-0 left-0 right-0 "
-      sx={{ height: { xs: "200px", sm: "auto", md: "auto" } }}
+      className="bg-black text-white flex justify-center items-center"
+      sx={{
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: { xs: "200px", sm: "auto", md: "auto" },
+        paddingY: 2,
+      }}
     >
       <Stack
         flexDirection={{ xs: "column", sm: "column", md: "row" }}
         gap={{ xs: 2, sm: 5, md: 5 }}
-        paddingY={5}
-        alignItems={"center"}
+        paddingY={{ xs: 2, sm: 5, md: 0 }}
+        alignItems={{ xs: "center", sm: "center", md: "center" }}
       >
         <Typography>Wintana Apartment</Typography>
         <Stack justifyContent={"center"} alignItems={"center"}>

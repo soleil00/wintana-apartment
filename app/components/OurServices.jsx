@@ -6,7 +6,10 @@ import React from "react";
 
 const OurServices = () => {
   return (
-    <Box className="max-w-[1224px] w-full mx-auto" sx={{paddingX:{xs:"10px",sm:"0px",md:"opx"}}}>
+    <Box
+      className="max-w-[1224px] w-full mx-auto"
+      sx={{ paddingX: { xs: "10px", sm: "0px", md: "opx" } }}
+    >
       <h3 className="py-4 text-[30px] font-bold text-center">Our SerVices</h3>
 
       <Paper
@@ -15,26 +18,33 @@ const OurServices = () => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          flexDirection: { xs: "column", sm: "column", md: "row" }
-          
+          flexDirection: { xs: "column", sm: "column", md: "row" },
         }}
       >
         <Stack>
           <Stack marginBottom={"20px"}>
-            <Typography className="font-bold text-[25px] ">Swimming Pool</Typography>
+            <h3 className="font-bold text-[25px] ">Swimming Pool</h3>
             <Typography>some lorem for swiiming pols</Typography>
           </Stack>
           <Stack marginBottom={"20px"}>
-            <Typography className="font-bold text-[25px] ">Accomodation services</Typography>
+            <h3 className="font-bold text-[25px] ">Accomodation services</h3>
             <Typography>some lorem for swiiming pols</Typography>
           </Stack>
           <Stack marginBottom={"20px"}>
-            <Typography className="font-bold text-[25px] ">Commercial buildin for rent</Typography>
+            <h3 className="font-bold text-[25px] ">
+              Commercial buildin for rent
+            </h3>
             <Typography>some lorem for swiiming pols</Typography>
           </Stack>
         </Stack>
         <Stack>
-          <Image alt="image" src="/pool.jpeg" width={400} height={300}  className="w-full h-auto"/>
+          <Image
+            alt="image"
+            src="/pool.jpeg"
+            width={400}
+            height={300}
+            className="w-full h-auto"
+          />
         </Stack>
       </Paper>
     </Box>
