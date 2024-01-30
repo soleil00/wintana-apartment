@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} relative h-[100%]`}>
         <Header/>
         {children}
-         <BottomControll/>
+         {/* <BottomControll/>? */}
          {/* <FooterComp/> */}
       </body>
     </html>

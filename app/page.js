@@ -18,7 +18,8 @@ export default function Home() {
       <FavoriteRoom />
       <OurServices />
       {/* footer */}
-     
+      <BottomControll/>
+     <FooterComp/>
     </main>
   );
 }

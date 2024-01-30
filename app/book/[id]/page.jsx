@@ -4,9 +4,10 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import FooterComp from "@/app/components/FooterComp";
+import { Bathroom, Bed, Kitchen, LocationOn, People, Restaurant } from "@mui/icons-material";
 
 // Define the array of thumbnail images
 const thumbImages = [
@@ -44,7 +45,7 @@ const Page = () => {
   return (
     <Box
       className="mt-[65px] min-h-screen max-w-[1224px] w-full mx-auto"
-      padding={{ xs: "10px", sm: "10px", md: "0px" }}
+      padding={{ xs: "10px", sm: "10px", md: "10px" }}
     >
       <div>Here is your params: {params.id}</div>
       <Stack
@@ -59,7 +60,7 @@ const Page = () => {
             width={100}
             height={100}
             className={
-              windowWidth <= 480 ? "h-[200px] w-full" : "h-[450px] w-full"
+              windowWidth <= 480 ? "h-[200px] w-full" : "h-auto w-full"
             }
           />
           <Stack
@@ -88,11 +89,44 @@ const Page = () => {
         </Stack>
 
         {/* Room Information Section */}
-        <Stack>
-          <h3>Kings room on floor</h3>
-          <Typography>Here is room specification</Typography>
+        <Stack width={{ xs: "100%", sm: "100%", md: "50%" }} spacing={2} padding={"10px"}>
+          <h3 className="font-bold text-[25px]">Kings room on floor is for everyone to come</h3>
+          <Grid container spacing={2} >
+            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><People color="secondary" fontSize={"large"} />
+              <p className="text-sm">2 People</p></Grid>
+            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Bed color="secondary" fontSize={"large"} />
+              <p className="text-sm">2 Beds</p></Grid>
+            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Bathroom color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 BathRoom</p></Grid>
+            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Restaurant color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 Toilet</p></Grid>
+            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Kitchen color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 Kitchen</p></Grid>
+          </Grid>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+            . Magni voluptate commodi quas delectus quod vel ut, h
+            arum accusantium dolore perspiciatis natus laboriosam
+            sint eligendi nostrum fugit reprehenderit soluta necess
+            itatibus ad.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+            . Magni voluptate commodi quas delectus quod vel ut, h
+            arum accusantium dolore perspiciatis natus laboriosam
+            sint eligendi nostrum fugit reprehenderit soluta necess
+            itatibus ad.</p>
         </Stack>
       </Stack>
+
+      {/* contact sections  */}
+     <Stack>
+        <Typography>Contact us Today</Typography>
+
+        <Stack direction={"row"} spacing={2}>
+                <LocationOn color="secondary" fontSize="medium"/>
+                <Typography>kg 452 st</Typography>
+        </Stack>
+
+      </Stack> 
 
       {/* Footer Component */}
       <FooterComp />
@@ -100,5 +134,6 @@ const Page = () => {
   );
 };
 
-// Export the Page component
 export default Page;
+
+     
