@@ -59,7 +59,7 @@ const Page = () => {
             width={100}
             height={100}
             className={
-              windowWidth <= 480 ? "h-[200px] w-full" : "h-[350px] w-full"
+              windowWidth <= 480 ? "h-[200px] w-full" : "h-[450px] w-full"
             }
           />
           <Stack
