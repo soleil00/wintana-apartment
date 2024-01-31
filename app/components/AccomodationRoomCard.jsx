@@ -1,4 +1,4 @@
-import { Room, RoomService } from "@mui/icons-material";
+import { Kitchen, Room, RoomService, Wc } from "@mui/icons-material";
 import BedroomParentIcon from "@mui/icons-material/BedroomParent";
 import {
   Card,
@@ -19,14 +19,21 @@ const imageStyles = {
   height: 170,
 };
 
-const AccomodationRoomCard = ({ path, display, title, type }) => {
+const AccomodationRoomCard = ({
+  path,
+  display,
+  title,
+  type,
+  beds,
+  kitchen,
+  salon,
+  toilet,
+  rooms,
+  link,
+}) => {
   return (
     <Grid item {...display}>
-      <Link
-        href={`${
-          type === "commercial" ? "/floors/commercial" : "/floors"
-        }/${title}`}
-      >
+      <Link href={link}>
         <Card style={cardStyles}>
           <CardMedia
             component="img"
@@ -35,7 +42,7 @@ const AccomodationRoomCard = ({ path, display, title, type }) => {
             image={path}
             style={imageStyles}
           />
-          <CardContent>
+          <CardContent sx={{ padding: `${beds} && 0` }}>
             <Typography
               variant="h6"
               component="div"
@@ -52,17 +59,52 @@ const AccomodationRoomCard = ({ path, display, title, type }) => {
                 justifyContent={"space-between"}
                 alignItems={"center"}
               >
-                <Stack
-                  direction={"row"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  spacing={1}
-                >
-                  <BedroomParentIcon fontSize="medium" color="secondary" />
-                  <Typography variant="body2">
-                    3 full furnished rooms for various categories
-                  </Typography>
-                </Stack>
+                {rooms && (
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    spacing={1}
+                  >
+                    <BedroomParentIcon fontSize="medium" color="secondary" />
+                    <Typography variant="body2">
+                      3 full furnished rooms for various categories
+                    </Typography>
+                  </Stack>
+                )}
+
+                {/* for bed existing */}
+                {beds && (
+                  <>
+                    <Stack
+                      direction={"row"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      // spacing={1}
+                    >
+                      <BedroomParentIcon fontSize="small" color="secondary" />
+                      <Typography variant="body2">{beds}</Typography>
+                    </Stack>
+                    <Stack
+                      direction={"row"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      // spacing={1}
+                    >
+                      <Kitchen fontSize="small" color="secondary" />
+                      <Typography variant="body2">{kitchen} </Typography>
+                    </Stack>
+                    <Stack
+                      direction={"row"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      // spacing={1}
+                    >
+                      <Wc fontSize="small" color="secondary" />
+                      <Typography variant="body2">{toilet}</Typography>
+                    </Stack>
+                  </>
+                )}
               </Stack>
             )}
           </CardContent>

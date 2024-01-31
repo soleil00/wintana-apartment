@@ -1,6 +1,7 @@
 "use client";
 
-import { Container, Stack, Typography } from "@mui/material";
+import AccomodationRoomCard from "@/app/components/AccomodationRoomCard";
+import { Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -86,6 +87,48 @@ const page = ({ params }) => {
           </Link>
         </Stack>
       </Stack>
+      <h3>
+        Favorite Rooms from {goodTitle} {last}
+      </h3>
+      <Grid container spacing={2}>
+        <AccomodationRoomCard
+          path={"/room1.jpeg"}
+          room={4}
+          display={{ xs: 6, sm: 3, md: 2 }}
+          title={"Room 1"}
+          type={"commercial"}
+          link="/"
+          beds={1}
+          toilet={1}
+          kitchen={1}
+          // rooms={1}
+          type={"residential"}
+        />
+        <AccomodationRoomCard
+          path={"/room3.jpeg"}
+          room={4}
+          display={{ xs: 6, sm: 3, md: 2 }}
+          title={"Room 2"}
+          type={"commercial"}
+          beds={2}
+          toilet={1}
+          kitchen={1}
+          // rooms={2}
+          type={"residential"}
+        />
+        <AccomodationRoomCard
+          path={"/living.webp"}
+          room={4}
+          display={{ xs: 6, sm: 3, md: 2 }}
+          title={"Room 3"}
+          type={"commercial"}
+          beds={3}
+          toilet={1}
+          kitchen={1}
+          // rooms={3}
+          type={"residential"}
+        />
+      </Grid>
     </Container>
   );
 };
