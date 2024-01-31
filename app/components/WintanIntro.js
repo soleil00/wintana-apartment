@@ -4,7 +4,7 @@ import React from 'react';
 
 const WintanIntro = () => {
   return (
-    <Box className='flex justify-between px-5 py-2 max-w-[1224px] w-full mx-auto' sx={{flexDirection:{xs:"column",sm:"column",md:"row"},gap:{xs:0,sm:0,md:"20px"}}}>
+    <Box className='flex justify-between px-5 py-2 max-w-[1224px] items-center w-full mx-auto' sx={{flexDirection:{xs:"column",sm:"column",md:"row"},gap:{xs:0,sm:0,md:"20px"}}}>
           <Stack className="" sx={{width:{sm:"100%",sm:"100%",md:"40%"},margin:"auto"}}>
         <h3 className='text-center font-bold text-[30px] py-5'>Wintana Apartment</h3>
         <p>Welcome to Wintana Apartments—a dynamic city building seamlessly blending
@@ -13,7 +13,7 @@ const WintanIntro = () => {
           first three floors strike a balance between privacy and community living.
           </p>
           <p className="my-3">Experience luxury on the fourth floor with exclusive 
-          pentRooms and enjoy the top floor\'s comprehensive fitness and leisure center. 
+          pentRooms and enjoy the top floor comprehensive fitness and leisure center. 
           This sanctuary caters to a refined lifestyle, seamlessly combining luxury, recreation, 
           and well-being. Wintana Apartments defines urban living, harmonizing commercial vibrancy
           with residential elegance.
@@ -29,10 +29,10 @@ const WintanIntro = () => {
           heart of the city
         </p>
       </Stack>
-          <div className="w-[60%] bg-amber-200">
+          <Stack width={{xs:"100%",sm:"100%",md:"50%"}}>
               
         <Image src="/living.webp" className='w-[100%] h-auto' alt='some' width={600} height={400}/>
-      </div>
+      </Stack>
     
     </Box>
   );

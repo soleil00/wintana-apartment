@@ -26,14 +26,12 @@ import {
   ImageListItem,
   ImageListItemBar,
 } from "@mui/material";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import { Masonry } from "@mui/lab";
-// import MasonryItem from "@mui/lab/MasonryItem";
 import React from "react";
 
-const Page = () => {
-  const { title } = useParams();
+const Page = ({ params }) => {
+  const { title } = params;
   const regex = /[%]\d+/gi;
   const goodTitle = title.replace(regex, " ");
 

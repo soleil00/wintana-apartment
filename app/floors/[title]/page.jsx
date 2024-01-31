@@ -3,11 +3,10 @@
 import { Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import React from "react";
 
-const page = () => {
-  const { title } = useParams();
+const page = ({ params }) => {
+  const { title } = params;
   const regex = /[%]\d+/gi;
   const goodTitle = title.replace(regex, " ");
   const last = +title[title.length - 1];

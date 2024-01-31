@@ -18,10 +18,8 @@ const HeroSection = () => {
       
        
 
-          <Paper className="p-4 absolute -bottom-6 flex flex-row justify-between items-center" sx={{width:{xs:"90%",sm:"80%",md:"60%"}}}>
-              <TextField placeholder='Serach room for family'/>
-              <TextField placeholder='Serach room for family'/>
-              <TextField placeholder='Serach room for family'/>
+          <Paper  className="p-4 absolute -bottom-6 flex flex-row justify-between items-center" sx={{width:{xs:"90%",sm:"80%",md:"60%"}}}>
+              <TextField placeholder='Search for Accomodation,commercial or Leisure' fullWidth/>
           </Paper>
 
     </div>
