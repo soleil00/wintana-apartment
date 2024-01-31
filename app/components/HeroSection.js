@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
       <div className='mt-[60px] relative flex flex-col justify-center items-center'
           style={{
-              backgroundImage: 'url("./wintana.jpeg")',
+              backgroundImage: 'url("/wintana.jpeg")',
               backgroundSize: 'cover', backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat', height: '300px'
           }}>

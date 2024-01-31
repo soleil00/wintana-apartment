@@ -22,6 +22,8 @@ const FavoriteRoomcard = ({ room }) => {
       <Paper
         className="h-auto rounded-md soleil-shadow relative"
         sx={{ width: "100%" }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <Image
           src={room.image}

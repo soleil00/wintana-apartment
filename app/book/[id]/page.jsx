@@ -1,13 +1,22 @@
 // Import necessary modules
 
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import FooterComp from "@/app/components/FooterComp";
-import { Bathroom, Bed, Kitchen, LocationOn, People, Restaurant } from "@mui/icons-material";
+import {
+  Bathroom,
+  Bed,
+  Kitchen,
+  LocationOn,
+  People,
+  Restaurant,
+} from "@mui/icons-material";
+import ContactComp from "@/app/components/ContactComp";
+import BottomControll from "@/app/components/BottomControll";
 
 // Define the array of thumbnail images
 const thumbImages = [
@@ -89,51 +98,91 @@ const Page = () => {
         </Stack>
 
         {/* Room Information Section */}
-        <Stack width={{ xs: "100%", sm: "100%", md: "50%" }} spacing={2} padding={"10px"}>
-          <h3 className="font-bold text-[25px]">Kings room on floor is for everyone to come</h3>
-          <Grid container spacing={2} >
-            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><People color="secondary" fontSize={"large"} />
-              <p className="text-sm">2 People</p></Grid>
-            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Bed color="secondary" fontSize={"large"} />
-              <p className="text-sm">2 Beds</p></Grid>
-            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Bathroom color="secondary" fontSize={"large"} />
-              <p className="text-sm">1 BathRoom</p></Grid>
-            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Restaurant color="secondary" fontSize={"large"} />
-              <p className="text-sm">1 Toilet</p></Grid>
-            <Grid item xs={4} sm ={3} md={3}  className="flex flex-row justify-center items-center gap-1"><Kitchen color="secondary" fontSize={"large"} />
-              <p className="text-sm">1 Kitchen</p></Grid>
+        <Stack
+          width={{ xs: "100%", sm: "100%", md: "50%" }}
+          spacing={2}
+          padding={"10px"}
+        >
+          <h3 className="font-bold text-[25px]">
+            Kings room on floor is for everyone to come
+          </h3>
+          <Grid container spacing={2}>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={3}
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              <People color="secondary" fontSize={"large"} />
+              <p className="text-sm">2 People</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={3}
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              <Bed color="secondary" fontSize={"large"} />
+              <p className="text-sm">2 Beds</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={3}
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              <Bathroom color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 BathRoom</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={3}
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              <Restaurant color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 Toilet</p>
+            </Grid>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={3}
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              <Kitchen color="secondary" fontSize={"large"} />
+              <p className="text-sm">1 Kitchen</p>
+            </Grid>
           </Grid>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-            . Magni voluptate commodi quas delectus quod vel ut, h
-            arum accusantium dolore perspiciatis natus laboriosam
-            sint eligendi nostrum fugit reprehenderit soluta necess
-            itatibus ad.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-            . Magni voluptate commodi quas delectus quod vel ut, h
-            arum accusantium dolore perspiciatis natus laboriosam
-            sint eligendi nostrum fugit reprehenderit soluta necess
-            itatibus ad.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni
+            voluptate commodi quas delectus quod vel ut, h arum accusantium
+            dolore perspiciatis natus laboriosam sint eligendi nostrum fugit
+            reprehenderit soluta necess itatibus ad.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit . Magni
+            voluptate commodi quas delectus quod vel ut, h arum accusantium
+            dolore perspiciatis natus laboriosam sint eligendi nostrum fugit
+            reprehenderit soluta necess itatibus ad.
+          </p>
         </Stack>
       </Stack>
 
       {/* contact sections  */}
-     <Stack>
-        <Typography>Contact us Today</Typography>
 
-        <Stack direction={"row"} spacing={2}>
-                <LocationOn color="secondary" fontSize="medium"/>
-                <Typography>kg 452 st</Typography>
-        </Stack>
-
-      </Stack> 
+      <ContactComp />
 
       {/* Footer Component */}
+      <BottomControll />
       <FooterComp />
     </Box>
   );
 };
 
 export default Page;
-
-     

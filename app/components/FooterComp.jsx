@@ -13,13 +13,12 @@ const FooterComp = () => {
         left: 0,
         right: 0,
         height: { xs: "200px", sm: "auto", md: "auto" },
-        paddingY: 2,
       }}
     >
       <Stack
         flexDirection={{ xs: "column", sm: "column", md: "row" }}
-        gap={{ xs: 2, sm: 5, md: 5 }}
-        paddingY={{ xs: 2, sm: 5, md: 0 }}
+        gap={{ xs: 2, sm: 1, md: 5 }}
+        paddingY={{ xs: 2, sm: 1, md: 0 }}
         alignItems={{ xs: "center", sm: "center", md: "center" }}
       >
         <Typography>Wintana Apartment</Typography>
