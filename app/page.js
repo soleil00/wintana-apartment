@@ -13,6 +13,7 @@ import { getLocation } from "@/lib/location";
 import CommercialRooms from "./components/CommercialRooms";
 import AccomodationRoom from "./components/AccomodationRoom";
 import SportAndLeisure from "./components/SportAndLeisure";
+import ContactComp from "./components/ContactComp";
 
 export default function Home() {
 
@@ -41,9 +42,12 @@ export default function Home() {
       {/* <FavoriteRoom /> */}
       <OurServices />
 
-      {/* footer */}
+      {/* contact page */}
       <BottomControll/>
-     <FooterComp/>
+      <ContactComp visible={"soleil"} />
+
+      {/* footer */}
+     {/* <FooterComp/> */}
     </main>
   );
 }

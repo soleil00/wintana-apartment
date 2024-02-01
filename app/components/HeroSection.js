@@ -18,8 +18,9 @@ const HeroSection = () => {
       
        
 
-          <Paper  className="p-4 absolute -bottom-6 flex flex-row justify-between items-center" sx={{width:{xs:"90%",sm:"80%",md:"60%"}}}>
+          <Paper spacing={2} className="p-4 absolute -bottom-6 flex flex-row justify-between items-center" sx={{width:{xs:"90%",sm:"80%",md:"60%"}}}>
               <TextField placeholder='Search for Accomodation,commercial or Leisure' fullWidth/>
+              <button className="bg-yellow-400 text-center text-[18px] px-1 py-0 rounded-md">Check Availability</button>
           </Paper>
 
     </div>

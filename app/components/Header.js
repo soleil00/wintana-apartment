@@ -2,7 +2,7 @@
 "use client"
 
 import { Apartment, MenuOutlined, UsbRounded } from '@mui/icons-material';
-import { AppBar, IconButton, Stack, Toolbar, Typography ,Box,Drawer} from '@mui/material';
+import { AppBar, IconButton, Stack, Toolbar, Typography ,Box,Drawer, ListItem, List} from '@mui/material';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -15,7 +15,7 @@ function Header() {
           <Apartment color='secondary' sx={{ display: { xs: "none", sm: "none", md: "block" } }} fontSize={"large"} />
           <MenuOutlined color='secondary' sx={{ display: { xs: "block", sm: "block", md: "none" } }} onClick={ ()=>setIsOpen(true)} />
           <Link href="/">
-                      <Typography className="text-yellow-500 font-bold" fontSize={{xs:"18px",sm:"22px",md:"30px"}}>Wintana Apartment</Typography>
+                      <Typography className="bg-yellow-400 font-bold text-white px-2 py-1 rounded-sm" fontSize={{xs:"16px",sm:"20px",md:"25px"}}>Wintana Apartment</Typography>
 
           </Link>
         </IconButton>
@@ -24,7 +24,7 @@ function Header() {
           <Link href="/floors/Residential-Building" className="text-black">Rooms</Link>
           <Link href="/" className="text-black">Services</Link>
           <Link href="/" className="text-black">Contact Us</Link>
-          <Link href="/" className='bg-yellow-400 rounded-md px-4 py-2 font-bold text-black'>Book Online</Link>
+          <Link href="/" className='bg-yellow-400 rounded-md px-4 py-2 font-bold text-white'>Book Online</Link>
         </Stack>
 
         
@@ -34,8 +34,26 @@ function Header() {
       
           <Drawer open={isOpen} onClose={()=>setIsOpen(false)} anchor='left' sx={{width:"100%"}}>
             <Box width={"230px"}>
-              thi is test
-              </Box>
+
+          <List>
+            <Link href="/" onClick={()=>setIsOpen(false)}>
+              <ListItem>
+                Home
+              </ListItem>
+            </Link>
+            <Link href="/" onClick={()=>setIsOpen(false)}>
+              <ListItem>
+                Home
+              </ListItem>
+            </Link>
+            <Link href="/" onClick={()=>setIsOpen(false)}>
+              <ListItem>
+                Home
+              </ListItem>
+            </Link>
+            </List>
+
+            </Box>
           </Drawer>
     
     </AppBar>

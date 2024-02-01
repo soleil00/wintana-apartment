@@ -52,39 +52,41 @@ const AccomodationRoom = () => {
         spacious retreat with <span className="font-bold">3 bedrooms</span>.
         Each room has 1 kitchen, 1 bathroom and 1 Toilet.
       </Typography>
-      {/* <Grid container spacing={2}>
-     
+      <Grid container spacing={2}>
         <AccomodationRoomCard
           path={"/wintana.jpeg"}
-          display={{ xs: 6, sm: 4, md: 3 }}
+          display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 1"}
-          link={"/"}
+          link={"/floors/floor-1"}
+          rooms={1}
         />
         <AccomodationRoomCard
           path={"/room1.jpeg"}
-          display={{ xs: 6, sm: 4, md: 3 }}
+          display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 2"}
-          link={"/"}
+          link={"/floors/floor-2"}
+          rooms={2}
         />
         <AccomodationRoomCard
           path={"/living.webp"}
-          display={{ xs: 6, sm: 4, md: 3 }}
+          display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 3"}
-          link={"/"}
+          link={"/floors/floor-3"}
+          rooms={3}
         />
-        <AccomodationRoomCard
+        {/* <AccomodationRoomCard
           path={"/living-room.webp"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 4"}
           link={"/"}
-        />
-        <AccomodationRoomCard
+        /> */}
+        {/* <AccomodationRoomCard
           path={"/room1.jpeg"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 5"}
           link={"/"}
-        />
-      </Grid> */}
+        /> */}
+      </Grid>
     </Container>
   );
 };

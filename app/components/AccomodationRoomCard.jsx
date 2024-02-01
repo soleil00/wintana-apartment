@@ -30,6 +30,7 @@ const AccomodationRoomCard = ({
   toilet,
   rooms,
   link,
+  description,
 }) => {
   return (
     <Grid item {...display}>
@@ -61,14 +62,27 @@ const AccomodationRoomCard = ({
               >
                 {rooms && (
                   <Stack
-                    direction={"row"}
+                    direction={{ xs: "column", sm: "row", md: "row" }}
                     justifyContent={"center"}
                     alignItems={"center"}
                     spacing={1}
                   >
-                    <BedroomParentIcon fontSize="medium" color="secondary" />
-                    <Typography variant="body2">
-                      3 full furnished rooms for various categories
+                    <Stack
+                      direction={"row"}
+                      justifyContent={"center"}
+                      alignItems={"center"}
+                      spacing={0.5}
+                    >
+                      <BedroomParentIcon fontSize="medium" color="secondary" />
+                      <Typography variant="body2">
+                        3 full furnished rooms
+                      </Typography>
+                    </Stack>
+                    <Typography
+                      className="bg-yellow-400 text-[10px] rounded-md text-center text-black"
+                      padding={{ xs: "4px", sm: "6px", md: "10px" }}
+                    >
+                      Check More
                     </Typography>
                   </Stack>
                 )}
