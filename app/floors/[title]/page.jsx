@@ -12,7 +12,7 @@ const page = ({ params }) => {
   const goodTitle = title.replace(regex, " ");
   const last = +title[title.length - 1];
   return (
-    <Container className="mt-[65px]">
+    <Container sx={{ marginTop: { xs: "67px", sm: "69px", md: "72px" } }}>
       <Stack
         width={"100%"}
         direction={{ xs: "column", sm: "column", md: "row" }}
@@ -94,23 +94,51 @@ const page = ({ params }) => {
         <AccomodationRoomCard
           path={"/room1.jpeg"}
           room={4}
-          display={{ xs: 6, sm: 3, md: 2 }}
-          title={"Room 1"}
+          display={{ xs: 12, sm: 6, md: 3 }}
+          title={"1 in 1 room"}
           type={"commercial"}
-          link="/"
-          beds={1}
-          toilet={1}
-          kitchen={1}
+          link={"/book/room-1"}
+          beds={"1 bed"}
+          toilet={"1 toilet"}
+          kitchen={"1 kitchen"}
           // rooms={1}
           type={"residential"}
         />
         <AccomodationRoomCard
+          path={"/room1.jpeg"}
+          room={4}
+          display={{ xs: 12, sm: 6, md: 3 }}
+          title={"2 in 1 room"}
+          type={"commercial"}
+          link={"/book/room-2"}
+          beds={"2 beds"}
+          toilet={"2 toiltes"}
+          kitchen={"2 kitchen"}
+          // rooms={1}
+          type={"residential"}
+        />
+        <AccomodationRoomCard
+          path={"/room1.jpeg"}
+          room={4}
+          display={{ xs: 12, sm: 6, md: 3 }}
+          title={"3 in 1 room"}
+          type={"commercial"}
+          m
+          link={"/book/room-3"}
+          beds={"3 beds"}
+          toilet={"3 toilets"}
+          kitchen={"3 kitchens"}
+          // rooms={1}
+          type={"residential"}
+        />
+        {/* <AccomodationRoomCard
           path={"/room3.jpeg"}
           room={4}
           display={{ xs: 6, sm: 3, md: 2 }}
           title={"Room 2"}
           type={"commercial"}
           beds={2}
+          link={"/"}
           toilet={1}
           kitchen={1}
           // rooms={2}
@@ -123,11 +151,12 @@ const page = ({ params }) => {
           title={"Room 3"}
           type={"commercial"}
           beds={3}
+          link={"/"}
           toilet={1}
           kitchen={1}
           // rooms={3}
           type={"residential"}
-        />
+        /> */}
       </Grid>
     </Container>
   );

@@ -52,34 +52,39 @@ const AccomodationRoom = () => {
         spacious retreat with <span className="font-bold">3 bedrooms</span>.
         Each room has 1 kitchen, 1 bathroom and 1 Toilet.
       </Typography>
-      <Grid container spacing={2}>
-        {/* Card 1 */}
+      {/* <Grid container spacing={2}>
+     
         <AccomodationRoomCard
           path={"/wintana.jpeg"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 1"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/room1.jpeg"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 2"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/living.webp"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 3"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/living-room.webp"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 4"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/room1.jpeg"}
           display={{ xs: 6, sm: 4, md: 3 }}
           title={"Floor 5"}
+          link={"/"}
         />
-      </Grid>
+      </Grid> */}
     </Container>
   );
 };

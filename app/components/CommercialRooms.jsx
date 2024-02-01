@@ -17,13 +17,14 @@ const CommercialRooms = () => {
         </Typography>
       </Stack>
 
-      <Grid container spacing={2}>
+      {/* <Grid container spacing={2}>
         <AccomodationRoomCard
           path={"/reatiler3.jpeg"}
           room={4}
           display={{ xs: 12, sm: 6, md: 4 }}
           title={"Commercial Retail Room"}
           type={"commercial"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/retailer1.jpeg"}
@@ -31,6 +32,7 @@ const CommercialRooms = () => {
           display={{ xs: 12, sm: 6, md: 4 }}
           title={"Commercial Retail Room"}
           type={"commercial"}
+          link={"/"}
         />
         <AccomodationRoomCard
           path={"/retailer2.jpeg"}
@@ -38,8 +40,9 @@ const CommercialRooms = () => {
           display={{ xs: 12, sm: 6, md: 4 }}
           title={"Commercial Retail Room"}
           type={"commercial"}
+          link={"/"}
         />
-      </Grid>
+      </Grid> */}
     </Container>
   );
 };
