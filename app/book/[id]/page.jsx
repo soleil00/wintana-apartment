@@ -71,20 +71,26 @@ const Page = () => {
     thumbImages = thumbImages3;
   }
 
-  // Params from the URL
-
-  // Effect to update window width on resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    const intervalId = setInterval(() => {
+      if (selectedId === thumbImages?.length - 1) {
+        setSelectedId(0);
+      } else {
+        setSelectedId((prev) => prev + 1);
+      }
+    }, 3000);
+
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearInterval(intervalId);
     };
-  }, []);
+  }, [selectedId, thumbImages]);
 
   return (
     <>
