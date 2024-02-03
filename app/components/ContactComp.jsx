@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Call,
   Facebook,
@@ -17,9 +19,28 @@ import {
   Button,
 } from "@mui/material";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
+const axiosClient = axios.create({
+  baseURL: "http://localhost:4000",
+  withCredentials: true,
+});
 
 function ContactComp({ visible }) {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSendMessage = async () => {
+    if (email && message) {
+      try {
+        const response = await axiosClient.post("/newsletter");
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error", error);
+      }
+    }
+  };
   return (
     <div className="bg-gray-400 w-[100%] mt-auto">
       <Container className="max-w-[1224px] w-full mx-auto py-4 mt-auto">
@@ -97,15 +118,26 @@ function ContactComp({ visible }) {
               // height={"370px"}
               spacing={2}
             >
-              <TextField fullWidth label="Enter Your Email" />
+              <TextField
+                fullWidth
+                label="Enter Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <TextField
                 fullWidth
                 label="Enter Your Message"
                 multiline
                 rows={4}
                 defaultValue="Edit here to add Your message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               />
-              <Button color="secondary" variant="outlined">
+              <Button
+                color="secondary"
+                variant="outlined"
+                onClick={handleSendMessage}
+              >
                 Send Message
               </Button>
             </Stack>
@@ -117,62 +149,3 @@ function ContactComp({ visible }) {
 }
 
 export default ContactComp;
-
-{
-  /* <h1 className="text-center text-[20px] py-7 font-bold ">
-        Book you Room with us today
-      </h1>
-      <Stack>
-        <Stack direction={"row"} spacing={2}>
-          <div className="flex gap-1 justify-center items-center">
-            <LocationOn fontSize="medium" color="secondary" />
-            <p>Address : </p>
-          </div>
-          <p>kg 452 st</p>
-        </Stack>
-        <Stack
-          direction="row"
-          spacing={2}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexWrap={"wrap"}
-        >
-          <Stack
-            direction={"row"}
-            spacing={2}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <WhatsApp fontSize="large" color="secondary" />
-            <p> +250 782 443 651</p>
-          </Stack>
-          <Stack
-            direction={"row"}
-            spacing={2}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Google fontSize="large" color="secondary" />
-            <p> srukundo01@gmail.co,</p>
-          </Stack>
-          <Stack
-            direction={"row"}
-            spacing={2}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Call fontSize="large" color="secondary" />
-            <p> +250 782 443 651</p>
-          </Stack>
-          <Stack
-            direction={"row"}
-            spacing={2}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Facebook fontSize="large" color="secondary" />
-            <p> Wintana facebook</p>
-          </Stack>
-        </Stack>
-      </Stack> */
-}

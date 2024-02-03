@@ -1,8 +1,8 @@
 
 "use client"
 
-import { Apartment, MenuOutlined, UsbRounded } from '@mui/icons-material';
-import { AppBar, IconButton, Stack, Toolbar, Typography ,Box,Drawer, ListItem, List} from '@mui/material';
+import { Apartment, KeyboardArrowDown, MenuOutlined, UsbRounded } from '@mui/icons-material';
+import { AppBar, IconButton, Stack, Toolbar, Typography ,Box,Drawer, ListItem, List, Accordion, AccordionSummary, AccordionDetails} from '@mui/material';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -33,7 +33,9 @@ function Header() {
       {/*  */}
       
           <Drawer open={isOpen} onClose={()=>setIsOpen(false)} anchor='left' sx={{width:"100%"}}>
-            <Box width={"230px"}>
+        <Box width={"230px"}>
+          
+          <Typography className='text-center py-2 font-bold text-[30px]'>Wintana Apartment</Typography>
 
           <List>
             <Link href="/" onClick={()=>setIsOpen(false)}>
@@ -41,16 +43,73 @@ function Header() {
                 Home
               </ListItem>
             </Link>
-            <Link href="/" onClick={()=>setIsOpen(false)}>
+            <Link href="/floors/commercial/commercial-buildings" onClick={()=>setIsOpen(false)}>
               <ListItem>
-                Home
+                Commercial retailer
               </ListItem>
             </Link>
-            <Link href="/" onClick={()=>setIsOpen(false)}>
+            
+           
               <ListItem>
-                Home
+              <Accordion className="w-full">
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 1</AccordionSummary>
+                <AccordionDetails>
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  </Link>
+                  
+                  
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  </Link>
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  </Link>
+                </AccordionDetails>
+                </Accordion>
+            </ListItem>
+            
+              <ListItem>
+              <Accordion className="w-full">
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 2</AccordionSummary>
+                <AccordionDetails>
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  </Link>
+                  
+                  
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  </Link>
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  </Link>
+                </AccordionDetails>
+                </Accordion>
+            </ListItem>
+            
+              <ListItem>
+              <Accordion className="w-full">
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 3</AccordionSummary>
+                <AccordionDetails>
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  </Link>
+                  
+                  
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  </Link>
+                </AccordionDetails>
+                <AccordionDetails>
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  </Link>
+                </AccordionDetails>
+                </Accordion>
               </ListItem>
-            </Link>
+ 
             </List>
 
             </Box>
