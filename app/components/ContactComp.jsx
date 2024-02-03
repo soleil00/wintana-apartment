@@ -23,8 +23,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:4000",
-  withCredentials: true,
+  baseURL: "https://wintana-api.vercel.app/",
 });
 
 function ContactComp({ visible }) {
@@ -34,13 +33,30 @@ function ContactComp({ visible }) {
   const handleSendMessage = async () => {
     if (email && message) {
       try {
-        const response = await axiosClient.post("/newsletter");
-        console.log(response.data);
+        const response = await axiosClient.post("/api/message", {
+          email,
+          message,
+        });
+
+        setEmail("");
+        setMessage("");
+
+        console.log("response:", response);
+
+        if (response.status === 200) {
+          console.log("Email sent successfully");
+          // You may want to handle success in your UI
+        } else {
+          console.error("Error:", response.statusText);
+          // Handle the error as needed
+        }
       } catch (error) {
-        console.error("Error", error);
+        console.error("Error:", error);
+        // Handle the error as needed
       }
     }
   };
+
   return (
     <div className="bg-gray-400 w-[100%] mt-auto">
       <Container className="max-w-[1224px] w-full mx-auto py-4 mt-auto">
@@ -54,7 +70,6 @@ function ContactComp({ visible }) {
             <Stack
               className=" border-gray-400 border rounded-md p-4"
               width={{ xs: "100%", sm: "100%", md: "30%" }}
-              // height={"370px"}
             >
               <Typography
                 variant="h4"
@@ -79,7 +94,6 @@ function ContactComp({ visible }) {
           <Stack
             className=" border-gray-400 border rounded-md p-4"
             width={{ xs: "100%", sm: "100%", md: "30%" }}
-            // height={"370px"}
           >
             <Typography
               variant="h4"
