@@ -43,9 +43,7 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 const Page = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [selectedId, setSelectedId] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpen, setIsOpen] = useState(false);
 
   let thumbImages;
