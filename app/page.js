@@ -1,12 +1,9 @@
 'use client'
-
-import Image from "next/image";
-import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import WintanIntro from "./components/WintanIntro";
-import FavoriteRoom from "./components/FavoriteRoom";
+
 import OurServices from "./components/OurServices";
-import FooterComp from "./components/FooterComp";
+
 import BottomControll from "./components/BottomControll";
 import { useEffect } from "react";
 import { getLocation } from "@/lib/location";
@@ -14,6 +11,20 @@ import CommercialRooms from "./components/CommercialRooms";
 import AccomodationRoom from "./components/AccomodationRoom";
 import SportAndLeisure from "./components/SportAndLeisure";
 import ContactComp from "./components/ContactComp";
+
+//swipper imports
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import 'swiper/css/scrollbar';
+import Swipper3 from "./components/swippper/Swipper3";
+import Swipper2 from "./components/swippper/Swipper2";
+import Swipper1 from "./components/swippper/Swipper1";
+import Swipper4 from "./components/swippper/Swipper4";
+
 
 export default function Home() {
 
@@ -26,7 +37,34 @@ export default function Home() {
   return (
     <main className="relative">
       
-      <HeroSection />
+      <Swiper modules={[Pagination, Autoplay]}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{ delay: 2500 }}
+        // pagination={{ clickable: true }}
+      >
+
+        <SwiperSlide>
+          <HeroSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swipper3 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swipper2 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swipper1 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Swipper4 />
+        </SwiperSlide>
+
+      </Swiper>
+      
+      
+
+
       <WintanIntro />
       
       

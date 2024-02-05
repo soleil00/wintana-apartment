@@ -4,7 +4,7 @@ import React from 'react';
 
 const WintanIntro = () => {
   return (
-    <Box className='flex justify-between px-5 py-2 max-w-[1224px] items-center w-full mx-auto' sx={{flexDirection:{xs:"column",sm:"column",md:"row"},gap:{xs:0,sm:0,md:"20px"}}}>
+    <Box className='flex justify-between px-5 -z-100 py-2 max-w-[1224px] items-center w-full mx-auto' sx={{flexDirection:{xs:"column",sm:"column",md:"row"},gap:{xs:0,sm:0,md:"20px"}}}>
           <Stack className="" sx={{width:{sm:"100%",sm:"100%",md:"40%"},margin:"auto"}}>
         <h3 className='text-center font-bold text-[30px] py-5'>Wintana Apartment</h3>
         <p>Welcome to Wintana Apartments—a dynamic city building seamlessly blending

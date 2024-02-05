@@ -58,7 +58,7 @@ function ContactComp({ visible }) {
   };
 
   return (
-    <div className="bg-gray-400 w-[100%] mt-auto">
+    <div className="bg-gray-400 w-[100%] mt-auto" id="contact">
       <Container className="max-w-[1224px] w-full mx-auto py-4 mt-auto">
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
@@ -91,9 +91,11 @@ function ContactComp({ visible }) {
             </Stack>
           )}
 
+          {/* <div id="contact" className="w-full sm:w-full md:w-1/3"> */}
           <Stack
             className=" border-gray-400 border rounded-md p-4"
             width={{ xs: "100%", sm: "100%", md: "30%" }}
+            id="contact"
           >
             <Typography
               variant="h4"
@@ -125,6 +127,7 @@ function ContactComp({ visible }) {
               </Stack>
             </Stack>
           </Stack>
+          {/* </div> */}
           {visible && (
             <Stack
               className=" border-gray-400 border rounded-md p-4"

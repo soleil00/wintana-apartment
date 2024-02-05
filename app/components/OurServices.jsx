@@ -9,6 +9,7 @@ const OurServices = () => {
     <Box
       className="max-w-[1224px] w-full mx-auto"
       sx={{ paddingX: { xs: "10px", sm: "0px", md: "opx" } }}
+      id="service"
     >
       <h3 className="py-4 text-[30px] font-bold text-center">Our SerVices</h3>
 

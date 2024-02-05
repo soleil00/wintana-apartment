@@ -8,6 +8,20 @@ import React, { useState } from 'react';
 
 function Header() {
   const [isOpen,setIsOpen] = useState(false)
+
+  const scrollUser=()=>{
+    const target=document.getElementById("contact")
+    if (target) {
+      target.scrollIntoView({behavior:"smooth"})
+    }
+  }
+  const scrollUser2=()=>{
+    const target=document.getElementById("service")
+    if (target) {
+      target.scrollIntoView({behavior:"smooth"})
+    }
+  }
+
   return (
     <AppBar sx={{backgroundColor:"#D9D9D9"}}>
       <Toolbar className="justify-between sm:p-0" sx={{ padding: 0 }}>
@@ -19,11 +33,11 @@ function Header() {
 
           </Link>
         </IconButton>
-        <Stack direction={"row"} spacing={{ xs: 2, sm: 3, md: 7 }} padding={"10px"} display={{xs:"none",sm:"none",md:"block"}}>
+        <Stack direction={"row"} spacing={{ xs: 2, sm: 3, md: 7 }} padding={"10px"} display={{xs:"none",sm:"none",md:"block"}} alignItems={"center"}>
           <Link href="/" className="text-black">Home</Link>
           <Link href="/floors/Residential-Building" className="text-black">Rooms</Link>
-          <Link href="/" className="text-black">Services</Link>
-          <Link href="/" className="text-black">Contact Us</Link>
+          <p onClick={scrollUser2} className="text-black inline-block">Services</p>
+          <p onClick={scrollUser}  className="text-black inline-block">Contact Us</p>
           <Link href="/" className='bg-yellow-400 rounded-md px-4 py-2 font-bold text-white'>Book Online</Link>
         </Stack>
 
