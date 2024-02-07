@@ -9,9 +9,9 @@ const HeroSection = () => {
   return (
       <div className='mt-[60px] z-1000 relative flex flex-col justify-center items-center'
           style={{
-              backgroundImage: 'url("/wintana.jpeg")',
+              backgroundImage: 'url("/apartment/view4.png")',
               backgroundSize: 'cover', backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat', height: '200px'
+              backgroundRepeat: 'no-repeat', height: '600px'
           }}>
           
       {/* <h3 className='text-[25px] sm:text-[40px] md:text-[50px] md:text-red-400 font-bold text-yellow-700'> */}

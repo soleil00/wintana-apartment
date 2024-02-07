@@ -1,5 +1,3 @@
-// Import necessary modules
-
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -72,19 +70,19 @@ const Page = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    const intervalId = setInterval(() => {
-      if (selectedId === thumbImages?.length - 1) {
-        setSelectedId(0);
-      } else {
-        setSelectedId((prev) => prev + 1);
-      }
-    }, 3000);
+    // const intervalId = setInterval(() => {
+    //   if (selectedId === thumbImages?.length - 1) {
+    //     setSelectedId(0);
+    //   } else {
+    //     setSelectedId((prev) => prev + 1);
+    //   }
+    // }, 3000);
 
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      clearInterval(intervalId);
+      // clearInterval(intervalId);
     };
   }, [selectedId, thumbImages]);
 
@@ -111,20 +109,18 @@ const Page = () => {
               navigation={true}
               thumbs={{ swiper: thumbsSwiper }}
               modules={[FreeMode, Navigation, Thumbs]}
-              className="mySwiper2"
+              // className="mySwiper2"
             >
               {thumbImages.map((thumb, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="w-[400px] h-[500px]">
                   <Image
                     key={thumb.id}
                     src={thumb.path}
                     alt={`Thumbnail ${index + 1}`}
                     width={400}
-                    height={400}
-                    className={`border-4 rounded-md ${
-                      selectedId === index ? "border-green-600" : ""
-                    }`}
-                    onClick={() => setSelectedId(index)}
+                    height={450}
+                    className={`border-4 border-red-800 h-[10%] rounded-md `}
+                    // onClick={() => setSelectedId(index)}
                   />
                 </SwiperSlide>
               ))}
@@ -147,47 +143,12 @@ const Page = () => {
                     alt={`Thumbnail ${index + 1}`}
                     width={40}
                     height={40}
-                    className={`w-[150px] h-auto border-4 rounded-md ${
-                      selectedId === index ? "border-green-600" : ""
-                    }`}
+                    className={`w-[150px] h-auto border-4 rounded-md `}
                     // onClick={() => setSelectedId(index)}
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* <Image
-              src={thumbImages[selectedId].path}
-              alt="image"
-              width={100}
-              height={100}
-              className={
-                windowWidth <= 480 ? "h-[250px] w-full" : "h-auto w-full"
-              }
-            />
-            <Stack
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              spacing={{ xs: 0, sm: 2, md: 0 }}
-              paddingY={1}
-              width="100%"
-              overflow={"scroll"}
-            >
-              {thumbImages.map((thumb, index) => (
-                <Image
-                  key={thumb.id}
-                  src={thumb.path}
-                  alt={`Thumbnail ${index + 1}`}
-                  width={40}
-                  height={40}
-                  className={`w-[150px] h-auto border-4 rounded-md ${
-                    selectedId === index ? "border-green-600" : ""
-                  }`}
-                  onClick={() => setSelectedId(index)}
-                />
-              ))}
-            </Stack> */}
           </Stack>
 
           {/* Room Information Section */}

@@ -46,7 +46,7 @@
 
 .swiper {
   width: 100%;
-  height: 100%;
+  height: 10%;
 }
 
 .swiper-slide {
@@ -79,7 +79,7 @@
 }
 
 .mySwiper2 {
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 

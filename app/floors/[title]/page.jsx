@@ -29,7 +29,13 @@ const page = ({ params }) => {
           <Stack width={{ xs: "100%", sm: "100%", md: "50%" }}>
             <Image
               alt="image here"
-              src="/wintana.jpeg"
+              src={`${
+                last === 1
+                  ? "/apartment/view1.png"
+                  : last === 2
+                  ? "/apartment/view2.ong"
+                  : "/apartment/view3.png"
+              }`}
               width={200}
               height={300}
               className="w-[100%]"
@@ -100,7 +106,7 @@ const page = ({ params }) => {
         </h3>
         <Grid container spacing={2}>
           <AccomodationRoomCard
-            path={"/room1.jpeg"}
+            path={"/room1/1roomsalon.jpg"}
             room={4}
             display={{ xs: 12, sm: 6, md: 3 }}
             title={"1 in 1 room"}
@@ -111,7 +117,7 @@ const page = ({ params }) => {
             type={"residential"}
           />
           <AccomodationRoomCard
-            path={"/room1.jpeg"}
+            path={"/room2/2roomkitchen2.jpg"}
             room={4}
             display={{ xs: 12, sm: 6, md: 3 }}
             title={"2 in 1 room"}
@@ -122,7 +128,7 @@ const page = ({ params }) => {
             type={"residential"}
           />
           <AccomodationRoomCard
-            path={"/room1.jpeg"}
+            path={"/room3/3roomsalon2.jpg"}
             room={4}
             display={{ xs: 12, sm: 6, md: 3 }}
             title={"3 in 1 room"}

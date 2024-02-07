@@ -89,3 +89,38 @@ export default function Home() {
     </main>
   );
 }
+
+
+
+{/* <Image
+              src={thumbImages[selectedId].path}
+              alt="image"
+              width={100}
+              height={100}
+              className={
+                windowWidth <= 480 ? "h-[250px] w-full" : "h-auto w-full"
+              }
+            />
+            <Stack
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              spacing={{ xs: 0, sm: 2, md: 0 }}
+              paddingY={1}
+              width="100%"
+              overflow={"scroll"}
+            >
+              {thumbImages.map((thumb, index) => (
+                <Image
+                  key={thumb.id}
+                  src={thumb.path}
+                  alt={`Thumbnail ${index + 1}`}
+                  width={40}
+                  height={40}
+                  className={`w-[150px] h-auto border-4 rounded-md ${
+                    selectedId === index ? "border-green-600" : ""
+                  }`}
+                  onClick={() => setSelectedId(index)}
+                />
+              ))}
+            </Stack> */}

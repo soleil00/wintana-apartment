@@ -31,7 +31,7 @@ const WintanIntro = () => {
       </Stack>
           <Stack width={{xs:"100%",sm:"100%",md:"50%"}}>
               
-        <Image src="/living.webp" className='w-[100%] h-auto' alt='some' width={600} height={400}/>
+        <Image src="/apartment/view1.png" className='w-[100%] h-auto' alt='some' width={600} height={400}/>
       </Stack>
     
     </Box>

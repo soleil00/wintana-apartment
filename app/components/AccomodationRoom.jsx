@@ -54,21 +54,21 @@ const AccomodationRoom = () => {
       </Typography>
       <Grid container spacing={2}>
         <AccomodationRoomCard
-          path={"/wintana.jpeg"}
+          path={"/apartment/view2.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 1"}
           link={"/floors/floor-1"}
           rooms={1}
         />
         <AccomodationRoomCard
-          path={"/room1.jpeg"}
+          path={"/apartment/view3.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 2"}
           link={"/floors/floor-2"}
           rooms={2}
         />
         <AccomodationRoomCard
-          path={"/living.webp"}
+          path={"/apartment/view4.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
           title={"Floor 3"}
           link={"/floors/floor-3"}
