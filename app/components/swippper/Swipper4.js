@@ -8,6 +8,12 @@ import 'leaflet/dist/leaflet.css';
 const Swipper4 = () => {
   const [coords, setCoords] = useState([]);
 
+  const iconImage = {
+  iconUrl: '/marker.svg',
+    iconSize: [25, 41],
+}
+
+
   useEffect(() => {
     // Function to fetch user's location
     const getMyLocation = () => {

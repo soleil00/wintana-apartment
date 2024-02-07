@@ -1,6 +1,7 @@
 "use client"
 
 import { Paper, TextField } from '@mui/material'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -9,21 +10,15 @@ const Swipper2 = () => {
   return (
       <div className='mt-[60px] z-1000 relative flex flex-col justify-center items-center'
           style={{
-              backgroundImage: 'url("/swiper2.jpeg")',
+              backgroundImage: 'url("/room1/1roomsalon.jpg")',
               backgroundSize: 'cover', backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat', height: '300px'
           }}>
           
-          <h3 className='text-[25px] sm:text-[40px] md:text-[50px] md:text-red-400 font-bold text-yellow-700'>
-              SWipper 2 comp 
-      </h3>
+          {/* <p className='text-black text-[24px]'>Best Individual Room Can be found only at winatana Apartment</p> */}
+          <Link href="/book/room-1" className="bg-yellow-500 text-white px-4 py-2 rounded-md">View This Room Now</Link>
       
        
-
-          {/* <Paper spacing={2} className="p-4 absolute -bottom-6 flex flex-row justify-between items-center" sx={{width:{xs:"90%",sm:"80%",md:"60%"}}}>
-              <TextField placeholder='Search for Accomodation,commercial or Leisure' fullWidth/>
-              <button className="bg-yellow-400 text-center text-[18px] px-1 py-0 rounded-md">Check Availability</button>
-          </Paper> */}
 
     </div>
   )

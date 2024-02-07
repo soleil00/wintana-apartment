@@ -18,14 +18,14 @@ const CommercialRooms = () => {
       </Stack>
 
       <Grid container spacing={2}>
-        <AccomodationRoomCard
+        {/* <AccomodationRoomCard
           path={"/reatiler3.jpeg"}
           room={4}
           display={{ xs: 12, sm: 6, md: 4 }}
           title={"Commercial Retail Room"}
           type={"commercial"}
           link={"/floors/commercial/commercial-room-1"}
-        />
+        /> */}
         <AccomodationRoomCard
           path={"/retailer1.jpeg"}
           room={4}
@@ -34,14 +34,14 @@ const CommercialRooms = () => {
           type={"commercial"}
           link={"/floors/commercial/commercial-room-2"}
         />
-        <AccomodationRoomCard
+        {/* <AccomodationRoomCard
           path={"/retailer2.jpeg"}
           room={4}
           display={{ xs: 12, sm: 6, md: 4 }}
           title={"Commercial Retail Room"}
           type={"commercial"}
           link={"/floors/commercial/commercial-room-3"}
-        />
+        /> */}
       </Grid>
     </Container>
   );
