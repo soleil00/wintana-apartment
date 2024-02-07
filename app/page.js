@@ -40,7 +40,7 @@ export default function Home() {
       <Swiper modules={[Pagination, Autoplay]}
       slidesPerView={1}
       loop={true}
-      autoplay={{ delay: 250000000000 }}
+      autoplay={{ delay: 3000 }}
         // pagination={{ clickable: true }}
       >
 
