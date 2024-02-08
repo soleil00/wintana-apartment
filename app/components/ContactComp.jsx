@@ -143,7 +143,6 @@ function ContactComp({ visible }) {
               />
               <TextField
                 fullWidth
-                label="Enter Your Message"
                 multiline
                 rows={4}
                 defaultValue="Edit here to add Your message"

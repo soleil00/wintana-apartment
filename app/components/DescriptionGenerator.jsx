@@ -52,22 +52,23 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
       ) : id === 2 ? (
         <Stack>
           {selectedId === 0 ? (
-            <Typography>bed 1</Typography>
-          ) : selectedId === 1 ? (
-            <Typography>bed 2</Typography>
-          ) : selectedId === 2 ? (
-            <Typography>washroom 1</Typography>
-          ) : selectedId === 3 ? (
-            <Typography>washroom 2</Typography>
-          ) : selectedId === 4 ? (
-            <Typography>salon 1</Typography>
-          ) : selectedId === 5 ? (
-            <Typography>salon 2</Typography>
-                      ) : selectedId === 6 ? (
-          <Typography>kitchen 1</Typography>
-                        ) : (
-                            <Typography>Kitchen2 2</Typography>
-          )}
+  <Typography>This is bed 1, located in the big room. It is spacious and comfortable, perfect for a good night's rest.</Typography>
+) : selectedId === 1 ? (
+  <Typography>This is bed 2, also located in the big room. It offers cozy accommodation and is ideal for relaxation.</Typography>
+) : selectedId === 2 ? (
+  <Typography>This is washroom 1, attached to bed 1. It includes a toilet and a bathroom for the exclusive use of guests staying in bed 1.</Typography>
+) : selectedId === 3 ? (
+  <Typography>This is washroom 2, attached to bed 2. It features a toilet and a bathroom for the exclusive use of guests staying in bed 2.</Typography>
+) : selectedId === 4 ? (
+  <Typography>This is salon 1, a shared living area accessible to all guests staying in the apartment. It's a comfortable space to relax and socialize.</Typography>
+) : selectedId === 5 ? (
+  <Typography>This is salon 2, another shared living area available to all guests. It provides a cozy atmosphere for gatherings and leisure activities.</Typography>
+) : selectedId === 6 ? (
+  <Typography>This is kitchen 1, a communal kitchen area where guests can prepare meals and enjoy shared cooking experiences.</Typography>
+) : (
+  <Typography>This is kitchen 2, another communal kitchen area equipped for culinary activities and shared dining experiences.</Typography>
+)}
+
         </Stack>
       ) : (
         <Stack>

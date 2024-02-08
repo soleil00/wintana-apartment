@@ -25,9 +25,9 @@ function Header() {
   return (
     <AppBar sx={{backgroundColor:"#D9D9D9"}}>
       <Toolbar className="justify-between sm:p-0" sx={{ padding: 0 }}>
-        <IconButton className='flex flex-row justify-center items-center'>
+        <IconButton className='flex flex-row justify-center items-center' onClick={ ()=>setIsOpen(true)}>
           <Apartment color='secondary' sx={{ display: { xs: "none", sm: "none", md: "block" } }} fontSize={"large"} />
-          <MenuOutlined color='secondary' sx={{ display: { xs: "block", sm: "block", md: "none" } }} onClick={ ()=>setIsOpen(true)} />
+          <MenuOutlined color='secondary' sx={{ display: { xs: "block", sm: "block", md: "none" } }}  />
           <Link href="/">
                       <Typography className="bg-yellow-400 font-bold text-white px-2 py-1 rounded-sm" fontSize={{xs:"16px",sm:"20px",md:"25px"}}>Wintana Apartment</Typography>
 
