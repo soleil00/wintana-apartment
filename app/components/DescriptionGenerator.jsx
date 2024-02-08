@@ -52,7 +52,8 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
       ) : id === 2 ? (
         <Stack>
           {selectedId === 0 ? (
-  <Typography>This is bed 1, located in the big room. It is spacious and comfortable, perfect for a good night's rest.</Typography>
+              <Typography>This is bed 1, located in the big room. It is spacious and comfortable, perfect for a good
+                night&apos;s rest.</Typography>
 ) : selectedId === 1 ? (
   <Typography>This is bed 2, also located in the big room. It offers cozy accommodation and is ideal for relaxation.</Typography>
 ) : selectedId === 2 ? (
@@ -60,7 +61,8 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
 ) : selectedId === 3 ? (
   <Typography>This is washroom 2, attached to bed 2. It features a toilet and a bathroom for the exclusive use of guests staying in bed 2.</Typography>
 ) : selectedId === 4 ? (
-  <Typography>This is salon 1, a shared living area accessible to all guests staying in the apartment. It's a comfortable space to relax and socialize.</Typography>
+                      <Typography>This is salon 1, a shared living area accessible to all guests
+                        staying in the apartment. It&apos;s a comfortable space to relax and socialize.</Typography>
 ) : selectedId === 5 ? (
   <Typography>This is salon 2, another shared living area available to all guests. It provides a cozy atmosphere for gatherings and leisure activities.</Typography>
 ) : selectedId === 6 ? (
@@ -85,15 +87,32 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
                       A functional bedside table with drawers provides easy access to
                       your nighttime essentials.</Typography>
           ) : selectedId === 3 ? (
-            <Typography>Convenience meets comfort in the first washroom, a well-appointed space where you can refresh and rejuvenate. This private enclave features a modern combination of bathroom and toilet facilities, providing all the essentials for your daily routine</Typography>
+                      <Typography>Convenience meets comfort in the first washroom, a well-appointed
+                        space where you can refresh and rejuvenate. This private enclave
+                        features a modern combination of bathroom and toilet facilities,
+                        providing all the essentials for your daily routine</Typography>
           ) : selectedId === 4 ? (
-            <Typography>Welcome to the second washroom, designed for both functionality and style. Equipped with a contemporary combination of bathroom and toilet amenities, this space offers a tranquil retreat for your personal grooming needs</Typography>
+                        <Typography>Welcome to the second washroom, designed for both functionality and style.
+                          Equipped with a contemporary combination of bathroom and toilet amenities,
+                          this space offers a tranquil retreat for your personal grooming needs
+                        </Typography>
           ) : selectedId === 5 ? (
-            <Typography>Step into the third washroom, a haven of relaxation and comfort. With its sleek design and thoughtful amenities, including a combined bathroom and toilet setup, this private sanctuary ensures a refreshing experience every time</Typography>
+                          <Typography>Step into the third washroom, a haven of relaxation and comfort.
+                            With its sleek design and thoughtful amenities, including a combined
+                            bathroom and toilet setup, this private sanctuary ensures a refreshing
+                            experience every time</Typography>
           ) : selectedId === 6 ? (
-            <Typography>Indulge in the shared kitchen and salon area, the heart of communal living in the house. This multifunctional space is ideal for cooking, dining, and socializing, offering modern appliances, ample storage, and comfortable seating for all residents to enjoy.</Typography>
+                            <Typography>Indulge in the shared kitchen and salon area, the heart of communal
+                              living in the house. This multifunctional space is ideal for cooking,
+                              dining, and socializing, offering modern appliances, ample storage, and
+                              comfortable seating for all residents to enjoy.</Typography>
           ) : selectedId === 7 ? (
-            <Typography>Enjoy the breathtaking view from the salon, where large windows frame stunning vistas of the surrounding landscape. Natural light floods the space, creating a bright and inviting atmosphere. Relax on comfortable seating as you take in the cool scenery, making the salon the perfect spot to unwind and appreciate the beauty of the outdoors.</Typography>
+                              <Typography>Enjoy the breathtaking view from the salon, where large
+                                windows frame stunning vistas of the surrounding landscape.
+                                Natural light floods the space, creating a bright and inviting
+                                atmosphere. Relax on comfortable seating as you take in the cool scenery,
+                                making the salon the perfect spot to unwind and appreciate the beauty of the
+                                outdoors.</Typography>
           ) : (
             <Typography>salon 2</Typography>
           )}
