@@ -34,24 +34,10 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
                 of modern living, where style and comfort converge in every
                 corner.
               </Typography>
-              <p
-                className=" italic text-blue-500"
-                onClick={() => setSelectedId((prev) => prev + 1)}
-              >
-                See next Img
-              </p>
+             
             </Stack>
-          ) : selectedId === 3 ? (
-            <Typography>
-              Every detail, from stylish furnishings to modern technology
-              integration, contributes to a visual delight. This salon is a
-              refined escape, providing a luxurious backdrop for every aspect of
-              modern living. Welcome to a fully equipped sanctuary where each
-              moment is an opportunity to experience the perfect balance of
-              contemporary design and ultimate comfort.
-            </Typography>
           ) : (
-            <Typography>
+             <Typography>
               Experience ultimate comfort with our specially designed bed,
               perfect for a single person. Marked by elegant typography, this
               bed is crafted with precision, ensuring a sanctuary of relaxation.
@@ -61,7 +47,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
               furniture but a promise of unparalleled relaxation for those
               seeking a peaceful retreat.
             </Typography>
-          )}
+          ) }
         </Stack>
       ) : id === 2 ? (
         <Stack>
@@ -70,37 +56,45 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
           ) : selectedId === 1 ? (
             <Typography>bed 2</Typography>
           ) : selectedId === 2 ? (
-            <Typography>toilet 1</Typography>
+            <Typography>washroom 1</Typography>
           ) : selectedId === 3 ? (
-            <Typography>toilet 2</Typography>
+            <Typography>washroom 2</Typography>
           ) : selectedId === 4 ? (
             <Typography>salon 1</Typography>
           ) : selectedId === 5 ? (
             <Typography>salon 2</Typography>
-          ) : (
-            <Typography>kitchen</Typography>
+                      ) : selectedId === 6 ? (
+          <Typography>kitchen 1</Typography>
+                        ) : (
+                            <Typography>Kitchen2 2</Typography>
           )}
         </Stack>
       ) : (
         <Stack>
-          {selectedId === 1 ? (
-            <Typography>bed 1</Typography>
+          {selectedId === 0 ? (
+                <Typography>Experience comfort in the first bedroom.
+                  The bed is complemented by a convenient bedside table
+                  equipped with drawers for your essentials</Typography>
+          ) : selectedId === 1 ? (
+                  <Typography>Unwind in the second bedroom featuring a comfortable single bed.
+                    A sleek bedside table with drawers stands beside the bed,
+                    offering storage space for your belongings.</Typography>
           ) : selectedId === 2 ? (
-            <Typography>bed 2</Typography>
+                    <Typography>Relax in the third bedroom furnished with a snug queen-sized bed.
+                      A functional bedside table with drawers provides easy access to
+                      your nighttime essentials.</Typography>
           ) : selectedId === 3 ? (
-            <Typography>bathroom 1</Typography>
+            <Typography>Convenience meets comfort in the first washroom, a well-appointed space where you can refresh and rejuvenate. This private enclave features a modern combination of bathroom and toilet facilities, providing all the essentials for your daily routine</Typography>
           ) : selectedId === 4 ? (
-            <Typography>bathroom 2</Typography>
+            <Typography>Welcome to the second washroom, designed for both functionality and style. Equipped with a contemporary combination of bathroom and toilet amenities, this space offers a tranquil retreat for your personal grooming needs</Typography>
           ) : selectedId === 5 ? (
-            <Typography>bathroom 3</Typography>
+            <Typography>Step into the third washroom, a haven of relaxation and comfort. With its sleek design and thoughtful amenities, including a combined bathroom and toilet setup, this private sanctuary ensures a refreshing experience every time</Typography>
           ) : selectedId === 6 ? (
-            <Typography>Kitchen</Typography>
+            <Typography>Indulge in the shared kitchen and salon area, the heart of communal living in the house. This multifunctional space is ideal for cooking, dining, and socializing, offering modern appliances, ample storage, and comfortable seating for all residents to enjoy.</Typography>
           ) : selectedId === 7 ? (
-            <Typography>salon 1</Typography>
-          ) : selectedId === 8 ? (
-            <Typography>salon 2</Typography>
+            <Typography>Enjoy the breathtaking view from the salon, where large windows frame stunning vistas of the surrounding landscape. Natural light floods the space, creating a bright and inviting atmosphere. Relax on comfortable seating as you take in the cool scenery, making the salon the perfect spot to unwind and appreciate the beauty of the outdoors.</Typography>
           ) : (
-            <Typography>extra</Typography>
+            <Typography>salon 2</Typography>
           )}
         </Stack>
       )}
