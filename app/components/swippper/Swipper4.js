@@ -8,14 +8,8 @@ import 'leaflet/dist/leaflet.css';
 const Swipper4 = () => {
   const [coords, setCoords] = useState([]);
 
-  const iconImage = {
-  iconUrl: '/marker.svg',
-    iconSize: [25, 41],
-}
-
-
   useEffect(() => {
-    // Function to fetch user's location
+
     const getMyLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -32,13 +26,13 @@ const Swipper4 = () => {
       }
     };
 
-    // Call the function to get user's location
+  
     getMyLocation();
   }, []);
 
   return (
     <Stack height="400px" position="relative" zIndex={1000} marginTop="30px">
-      {/* Render the MapContainer only on the client-side */}
+      
       {typeof window !== 'undefined' && (
         <MapContainer
           center={coords && coords.length ? coords : [-1.932432, 30.1362107]}
@@ -46,13 +40,13 @@ const Swipper4 = () => {
           style={{ width: '100%', height: '400px' }}
           scrollWheelZoom={true}
         >
-          {/* TileLayer for the map */}
+         
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          {/* Marker with Popup */}
+        
           {coords.length > 0 && (
             <>
               <Marker position={coords}>

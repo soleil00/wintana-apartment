@@ -145,7 +145,7 @@ function ContactComp({ visible }) {
                 fullWidth
                 multiline
                 rows={4}
-                defaultValue="Edit here to add Your message"
+                label="Edit here to add Your message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />

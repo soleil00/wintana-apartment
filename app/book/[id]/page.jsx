@@ -99,9 +99,9 @@ const Page = () => {
           direction={{ xs: "column", sm: "column", md: "row" }}
           justifyContent="space-between"
         >
-          {/* Main Image Section */}
+         
           <Stack width={{ xs: "100%", sm: "100%", md: "50%" }}>
-            <Swiper
+            {/* <Swiper
               style={{
                 "--swiper-navigation-color": "#fff",
                 "--swiper-pagination-color": "#fff",
@@ -128,8 +128,8 @@ const Page = () => {
                   />
                 </SwiperSlide>
               ))}
-            </Swiper>
-            <Swiper
+            </Swiper> */}
+            {/* <Swiper
               onSwiper={setThumbsSwiper}
               loop={true}
               spaceBetween={10}
@@ -154,7 +154,7 @@ const Page = () => {
                   />
                 </SwiperSlide>
               ))}
-            </Swiper>
+            </Swiper> */}
 
             {/* <Image
               src={thumbImages[selectedId].path}
@@ -191,7 +191,7 @@ const Page = () => {
           </Stack>
 
           {/* Room Information Section */}
-          <Stack
+          {/* <Stack
             width={{ xs: "100%", sm: "100%", md: "50%" }}
             spacing={2}
             padding={"10px"}
@@ -256,10 +256,10 @@ const Page = () => {
               id={id}
               setSelectedId={setSelectedId}
             />
-          </Stack>
+          </Stack> */}
         </Stack>
 
-        <Stack direction="row" spacing={2}>
+        {/* <Stack direction="row" spacing={2}>
           <Button
             variant="contained"
             color="success"
@@ -276,8 +276,8 @@ const Page = () => {
           >
             COntact us
           </Button>
-        </Stack>
-        <Stack
+        </Stack> */}
+        {/* <Stack
           spacing={2}
           marginTop={"15px"}
           justifyContents={"center"}
@@ -318,10 +318,10 @@ const Page = () => {
               Send Enquiry
             </Button>
           </DialogActions>
-        </Stack>
+        </Stack> */}
       </Box>
       {/* <BottomControll /> */}
-      <ContactComp visible={true} />
+      {/* <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
         <DialogContent>
@@ -358,7 +358,7 @@ const Page = () => {
             </DialogActions>
           </Stack>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 };

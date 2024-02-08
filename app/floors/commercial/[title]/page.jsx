@@ -137,7 +137,7 @@ const Page = ({ params }) => {
 
         <Swipper4 />
       </Container>
-      s{/* <BottomControll /> */}
+      {/* <BottomControll /> */}
       <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
@@ -161,8 +161,7 @@ const Page = ({ params }) => {
             <TextField
               label="Enter Your Phone Message"
               fullWidth
-              multiline
-              rows={4}
+
             />
             <DialogActions>
               <Button
