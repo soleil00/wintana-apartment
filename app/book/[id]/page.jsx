@@ -20,6 +20,8 @@ import {
 import Image from "next/image";
 import FooterComp from "@/app/components/FooterComp";
 import {
+  Accessibility,
+  Accessible,
   Bathroom,
   Bed,
   Kitchen,
@@ -45,8 +47,15 @@ const Page = () => {
   const [selectedId, setSelectedId] = useState(0);
   const [windowWidth, setWindowWidth] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [showImage, setShowImage] = useState(false)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null)
 
   let thumbImages;
+
+  const handleshowImage = (id) => {
+    setShowImage(true)
+    setSelectedImageIndex(id)
+  }
 
   const params = useParams();
   const id = +params.id.split("-")[1];
@@ -72,19 +81,12 @@ const Page = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    const intervalId = setInterval(() => {
-      if (selectedId === thumbImages?.length - 1) {
-        setSelectedId(0);
-      } else {
-        setSelectedId((prev) => prev + 1);
-      }
-    }, 3000);
-
+    
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      clearInterval(intervalId);
+  
     };
   }, [selectedId, thumbImages]);
 
@@ -94,13 +96,13 @@ const Page = () => {
         className="mt-[65px] min-h-screen max-w-[1224px] w-full mx-auto"
         padding={{ xs: "10px", sm: "10px", md: "10px" }}
       >
-        <div>Here is your params: {params.id}</div>
+        <div>Click on image bellow to see its full size</div>
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
           justifyContent="space-between"
         >
           {/* Main Image Section */}
-          <Stack width={{ xs: "100%", sm: "100%", md: "50%" }}>
+          <Stack width={{ xs: "100%", sm: "100%", md: "50%" }} className="h-[600px]">
             <Swiper
               style={{
                 "--swiper-navigation-color": "#fff",
@@ -109,9 +111,9 @@ const Page = () => {
               loop={true}
               spaceBetween={10}
               navigation={true}
-              thumbs={{ swiper: thumbsSwiper }}
+              thumbs={{ swiper: thumbsSwiper,slideThumbActiveClass:"testls" }}
               modules={[FreeMode, Navigation, Thumbs]}
-              className="mySwiper2"
+              className="h-[80%] w-full"
             >
               {thumbImages.map((thumb, index) => (
                 <SwiperSlide key={index}>
@@ -120,11 +122,11 @@ const Page = () => {
                     src={thumb.path}
                     alt={`Thumbnail ${index + 1}`}
                     width={400}
-                    height={400}
-                    className={`border-4 rounded-md ${
+                    height={500}
+                    className={`border-4 rounded-md h-full w-[100px] ${
                       selectedId === index ? "border-green-600" : ""
                     }`}
-                    onClick={() => setSelectedId(index)}
+                    onClick={() => handleshowImage(index)}
                   />
                 </SwiperSlide>
               ))}
@@ -148,56 +150,24 @@ const Page = () => {
                     width={40}
                     height={40}
                     className={`w-[150px] h-auto border-4 rounded-md ${
-                      selectedId === index ? "border-green-600" : ""
+                      selectedId === index ? "" : ""
                     }`}
-                    // onClick={() => setSelectedId(index)}
+                    onClick={() => setSelectedId(index)}
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
 
-            {/* <Image
-              src={thumbImages[selectedId].path}
-              alt="image"
-              width={100}
-              height={100}
-              className={
-                windowWidth <= 480 ? "h-[250px] w-full" : "h-auto w-full"
-              }
-            />
-            <Stack
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              spacing={{ xs: 0, sm: 2, md: 0 }}
-              paddingY={1}
-              width="100%"
-              overflow={"scroll"}
-            >
-              {thumbImages.map((thumb, index) => (
-                <Image
-                  key={thumb.id}
-                  src={thumb.path}
-                  alt={`Thumbnail ${index + 1}`}
-                  width={40}
-                  height={40}
-                  className={`w-[150px] h-auto border-4 rounded-md ${
-                    selectedId === index ? "border-green-600" : ""
-                  }`}
-                  onClick={() => setSelectedId(index)}
-                />
-              ))}
-            </Stack> */}
           </Stack>
 
-          {/* Room Information Section */}
+   
           <Stack
             width={{ xs: "100%", sm: "100%", md: "50%" }}
             spacing={2}
             padding={"10px"}
           >
             <h3 className="font-bold text-[25px]">
-              Kings room on floor is for everyone to come
+              Here is all You can find in Room {id}
             </h3>
             <Grid container spacing={2}>
               <Grid
@@ -208,7 +178,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <People color="secondary" fontSize={"large"} />
-                <p className="text-sm">2 People</p>
+              <p className="text-sm">{id ===1?1:id===2?2:3} People</p>
               </Grid>
               <Grid
                 item
@@ -218,7 +188,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Bed color="secondary" fontSize={"large"} />
-                <p className="text-sm">2 Beds</p>
+                <p className="text-sm">{id ===1?1:id===2?2:3}  Beds</p>
               </Grid>
               <Grid
                 item
@@ -228,7 +198,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Bathroom color="secondary" fontSize={"large"} />
-                <p className="text-sm">1 BathRoom</p>
+                <p className="text-sm">{id ===1?"1 bathroom":"1 bathroom for each person"}</p>
               </Grid>
               <Grid
                 item
@@ -237,8 +207,8 @@ const Page = () => {
                 md={3}
                 className="flex flex-row justify-center items-center gap-1"
               >
-                <Restaurant color="secondary" fontSize={"large"} />
-                <p className="text-sm">1 Toilet</p>
+                <Accessible color="secondary" fontSize={"large"} />
+                <p className="text-sm">{id ===1?"1 toliet":"1 toilet for each person"}</p>
               </Grid>
               <Grid
                 item
@@ -248,8 +218,9 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Kitchen color="secondary" fontSize={"large"} />
-                <p className="text-sm">1 Kitchen</p>
+                <p className="text-sm">{id ===1?"1 kitchen":"1 shared kitchen for all"}</p>
               </Grid>
+             
             </Grid>
             <DescriptionGenerator
               selectedId={selectedId}
@@ -304,7 +275,7 @@ const Page = () => {
             <MenuItem>Buy this room</MenuItem>
           </TextField>
           <TextField
-            label="Enter Your Phone Message"
+            label="Enter Your  Message"
             fullWidth
             multiline
             rows={4}
@@ -342,7 +313,7 @@ const Page = () => {
               <MenuItem>Buy this room</MenuItem>
             </TextField>
             <TextField
-              label="Enter Your Phone Message"
+              label="Enter Your Message"
               fullWidth
               multiline
               rows={4}
@@ -352,12 +323,19 @@ const Page = () => {
                 className="bg-green-500"
                 variant="contained"
                 color="secondary"
+                onClick={()=>setIsOpen(false)}
               >
                 Send Enquiry
               </Button>
             </DialogActions>
           </Stack>
         </DialogContent>
+      </Dialog>
+
+      {/* dialog to show full image details */}
+      <Dialog open={showImage} onClose={() => setShowImage(false)} fullWidth>
+        
+            <Image width={200} height={200} src={thumbImages[selectedImageIndex]?.path} className="w-auto h-auto" alt="selected image her"/>
       </Dialog>
     </>
   );
