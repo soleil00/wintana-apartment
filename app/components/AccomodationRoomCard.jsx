@@ -55,7 +55,7 @@ const AccomodationRoomCard = ({
               {title}
             </Typography>
 
-            {available && <p className="bg-red-700 px-3 py-1 text-white font-bold rounded-md absolute top-1 right-1">Comming soon</p>}
+            {available && <p className="bg-red-700 px-3 py-1 text-white font-bold rounded-md absolute top-1 right-1">Openning soon</p>}
 
             {type !== "commercial" && (
               <Stack

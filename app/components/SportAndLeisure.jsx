@@ -51,7 +51,7 @@ const SportAndLeisure = () => {
             {item.open ?
               <p className="bg-green-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Open Now</p>
               :
-              <p className="bg-red-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Comming Soon</p>}
+              <p className="bg-red-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Openning Soon</p>}
           </ImageListItem>
         ))}
       </Masonry>

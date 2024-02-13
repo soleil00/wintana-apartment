@@ -58,7 +58,7 @@ const Page = () => {
                   available={"true"}
         /> 
                     </Grid>
-                    <p className='flex items-center justify-center'>These service are comming soon to wintan Apartment</p>
+                    <p className='flex items-center justify-center'>These service are expected to open very soon to wintan Apartment</p>
                 </Stack>
                
             </Container>

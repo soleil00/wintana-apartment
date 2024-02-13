@@ -32,7 +32,7 @@ import {
 import ContactComp from "@/app/components/ContactComp";
 import BottomControll from "@/app/components/BottomControll";
 import DescriptionGenerator from "@/app/components/DescriptionGenerator";
-import { thumbImages1, thumbImages2, thumbImages3 } from "@/constants/images";
+
 
 //swipper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,6 +41,36 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+
+ const thumbImages1 = [
+  { path: "/room1/1roomwashroom.jpg", id: 1 },
+  { path: "/room1/1roomkitchen.jpg", id: 2 },
+  { path: "/room1/1roomsalon.jpg", id: 3 },
+  { path: "/room1/1roombed.jpg", id: 4 },
+];
+
+ const thumbImages2 = [
+  { path: "/room2/2roombed1.jpg", id: 1 },
+  { path: "/room2/2roombed2.jpg", id: 2 },
+  { path: "/room2/2roomwashroom1.jpg", id: 3 },
+  { path: "/room2/2roomwashroom2.jpg", id: 4 },
+  { path: "/room2/2roomsalon1.jpg", id: 5 },
+  { path: "/room2/2roomsalon2.jpg", id: 6 },
+  { path: "/room2/2roomkitchen1.jpg", id: 7 },
+  { path: "/room2/2roomkitchen1.jpg", id: 8 },
+];
+
+ const thumbImages3 = [
+  { path: "/room3/3roombed1.jpg", id: 1 },
+  { path: "/room3/3roombed2.jpg", id: 2 },
+  { path: "/room3/3roombed3.jpg", id: 3 },
+  { path: "/room3/3roomwashroom1.jpg", id: 4 },
+  { path: "/room3/3roomwashroom2.jpg", id: 5 },
+  { path: "/room3/3roomwashroom3.jpg", id: 6 },
+  { path: "/room3/3roomkitchen.jpg", id: 7 },
+  { path: "/room3/3roomsalon1.jpg", id: 8 },
+  { path: "/room3/3roomsalon2.jpg", id: 9 },
+];
 
 const Page = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
