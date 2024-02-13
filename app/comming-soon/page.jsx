@@ -6,7 +6,7 @@ import AccomodationRoomCard from '../components/AccomodationRoomCard'
 import ContactComp from '../components/ContactComp'
 import BottomControll from '../components/BottomControll'
 
-const page = () => {
+const Page = () => {
     const [width, setWidth] = useState(0)
 
     const getWindowWidth = () => {
@@ -68,4 +68,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
