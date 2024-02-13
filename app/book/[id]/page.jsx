@@ -153,7 +153,7 @@ const Page = () => {
                     alt={`Thumbnail ${index + 1}`}
                     width={400}
                     height={500}
-                    className={`border-4 rounded-md h-full w-[100px] ${
+                    className={`border-4 rounded-md h-[60%] w-[100px] ${
                       selectedId === index ? "border-green-600" : ""
                     }`}
                     onClick={() => handleshowImage(index)}

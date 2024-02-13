@@ -111,15 +111,17 @@ function ContactComp({ visible }) {
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <Instagram color="secondary" fontSize="large" />
-                <Typography>@winatan-apartment</Typography>
+                <Typography>@wintan-apartment</Typography>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <Facebook color="secondary" fontSize="large" />
-                <Typography>wijntana</Typography>
+                <Typography>wintana</Typography>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <WhatsApp color="secondary" fontSize="large" />
-                <Typography>0785612510</Typography>
+               <a href="tel:0785612510">
+  <Typography>0785612510</Typography>
+</a>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <Twitter color="secondary" fontSize="large" />

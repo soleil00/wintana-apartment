@@ -100,7 +100,7 @@ const Page = ({ params }) => {
                   height={300}
                   className="w-[100%] h-auto"
                 />
-                <ImageListItemBar title="Comming Soon" />
+                <ImageListItemBar title="Openning Soon" />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
@@ -110,7 +110,7 @@ const Page = ({ params }) => {
                   height={300}
                   className="w-[100%] h-auto"
                 />
-                <ImageListItemBar title="Comming Soon" />
+                <ImageListItemBar title="Openning Soon" />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
@@ -121,7 +121,7 @@ const Page = ({ params }) => {
                   className="w-[100%] h-auto"
                   
                 />
-                <ImageListItemBar title="Comming Soon" />
+                <ImageListItemBar title="Openning Soon" />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
@@ -131,7 +131,7 @@ const Page = ({ params }) => {
                   height={300}
                   className="w-[100%] h-auto"
                 />
-                <ImageListItemBar title="Comming Soon" />
+                <ImageListItemBar title="Openning Soon" />
               </SwiperSlide>
             </Swiper>
           </ImageListItem>

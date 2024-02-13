@@ -49,7 +49,7 @@ const SportAndLeisure = () => {
               sx={{ height: { xs: "30px", sm: "35px", md: "40px" } }}
             />
             {item.open ?
-              <p className="bg-green-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Open Now</p>
+              <p className="bg-green-700 text-white absolute px-1 py-0.5 rounded-md top-0 right-0">Open Now</p>
               :
               <p className="bg-red-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Openning Soon</p>}
           </ImageListItem>
