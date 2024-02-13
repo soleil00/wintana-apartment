@@ -15,6 +15,7 @@ const page = ({ params }) => {
   const reg2 = /\-/gi;
   const goodTitle = title.replace(regex, " ");
   const last = +title[title.length - 1];
+  const id = last
   return (
     <>
       <Container
@@ -40,7 +41,7 @@ const page = ({ params }) => {
               textAlign={"center"}
               className="pb-3 text-[20px] font-bold"
             >
-              {goodTitle.replace(reg2, " ")}
+              Here is all You can find in {id===1?"First":id===2?"Second":"Third"} Floor
             </Typography>
             <Typography py={"10px"} className="text-slate-400">
               Explore the residential charm of{" "}
@@ -51,14 +52,14 @@ const page = ({ params }) => {
                 : last > 2 && last < 4
                 ? "Third"
                 : "Fourth"}{" "}
-              floor at Wintana Apartments, featuring a trio of meticulously
+              floor apartments at Wintana Apartments, featuring a trio of meticulously
               designed rooms. . .
             </Typography>
             <Link href={`/book/room-1`}>
               <Typography py={"10px"} className="text-slate-400">
                 {" "}
                 <span className="font-bold text-gray-600">
-                  The first room offers
+                  The first Apartment offers
                 </span>{" "}
                 a cozy blend of{" "}
                 <span className="underline">
@@ -71,24 +72,26 @@ const page = ({ params }) => {
               <Typography py={"10px"} className="text-slate-400">
                 {" "}
                 <span className="font-bold text-gray-600">
-                  Move on to the second room with
+                  Move on to the second Apartment with
                 </span>{" "}
                 <span className="underline">
-                  2 bedrooms, maintaining the comfort of a 1 salon, 1 bathroom,
-                  1 kitchen, and an additional toilet
+                  2 rooms corresponding to 1 bedroom,1
+                  bathroom and 1 toilet for each
+                  room and 1 shared kitchen and salon for all rooms
                 </span>
               </Typography>
             </Link>
             <Link href={`/book/room-3`}>
               <Typography py={"10px"} className="text-slate-400">
                 {" "}
-                <span className="font-bold text-gray-600">The third room</span>,
+                <span className="font-bold text-gray-600">The third Apartment</span>,
                 a spacious retreat,
                 <span className="underline">
                   {" "}
-                  boasts 3 bedrooms, a welcoming salon, fully-equipped kitchen,
-                  private bathroom, and an extra toilet
+                  boasts 3 rooms, shared a welcoming salon and fully-equipped kitchen for all those rooms,
+                  and private 1 bathroom,1 toilet and 1 bed for each room.
                 </span>{" "}
+
                 Each room is crafted to provide residents with a unique and
                 comfortable living experience.
               </Typography>
@@ -102,8 +105,8 @@ const page = ({ params }) => {
           <AccomodationRoomCard
             path={"/room1/1roomkitchen.jpg"}
             room={4}
-            display={{ xs: 12, sm: 6, md: 3 }}
-            title={"1 in 1 room"}
+            display={{ xs: 12, sm: 6, md: 4 }}
+            title={"Apartment with 1 room"}
             link={"/book/room-1"}
             beds={"1 bed"}
             toilet={"1 toilet"}
@@ -113,8 +116,8 @@ const page = ({ params }) => {
           <AccomodationRoomCard
             path={"/room2/2roomsalon2.jpg"}
             room={4}
-            display={{ xs: 12, sm: 6, md: 3 }}
-            title={"2 in 1 room"}
+            display={{ xs: 12, sm: 6, md: 4 }}
+            title={"Apartment with 2 room"}
             link={"/book/room-2"}
             beds={"2 beds"}
             toilet={"2 toiltes"}
@@ -124,8 +127,8 @@ const page = ({ params }) => {
           <AccomodationRoomCard
             path={"/room3/3roomsalon1.jpg"}
             room={4}
-            display={{ xs: 12, sm: 6, md: 3 }}
-            title={"3 in 1 room"}
+            display={{ xs: 12, sm: 6, md: 4 }}
+            title={"Apartment with 3 room"}
             link={"/book/room-3"}
             beds={"3 beds"}
             toilet={"3 toilets"}

@@ -40,37 +40,38 @@ const AccomodationRoom = () => {
         className="py-2 text-gray-600"
         textAlign={{ xs: "center", sm: "start", md: "start" }}
       >
-        Each Floor has 3 Rooms which are described below:
+        Each Floor has 3 Apartments which are described below:
       </Typography>
       <Typography
         className="pb-2 text-slate-400"
         textAlign={{ xs: "center", sm: "start", md: "start" }}
       >
-        The first room for single person made up of{" "}
-        <span className="font-bold">1 bedrooms</span>, the second provides{" "}
-        <span className="font-bold">2 bedrooms</span>, and the third is a
-        spacious retreat with <span className="font-bold">3 bedrooms</span>.
-        Each room has 1 kitchen, 1 bathroom and 1 Toilet.
+        The first Apartment switable for single person made up of{" "}
+        <span className="font-bold">1 Room</span>, the second provides{" "}
+        <span className="font-bold">2 Room</span>, and the third is a
+        spacious retreat with <span className="font-bold">3 Rooms</span>.
+        Each room has 1 kitchen, 1 bathroom and 1 Toilet except for second
+        and third apartments which shares common Kitchen and salon fro all rooms.
       </Typography>
       <Grid container spacing={2}>
         <AccomodationRoomCard
           path={"/apartment/view2.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
-          title={"Floor 1"}
+          title={"First floor apartments"}
           link={"/floors/floor-1"}
           rooms={1}
         />
         <AccomodationRoomCard
           path={"/apartment/view3.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
-          title={"Floor 2"}
+          title={"Second floor apartments"}
           link={"/floors/floor-2"}
           rooms={2}
         />
         <AccomodationRoomCard
           path={"/apartment/view4.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
-          title={"Floor 3"}
+          title={"Third floor apartments"}
           link={"/floors/floor-3"}
           rooms={3}
         />

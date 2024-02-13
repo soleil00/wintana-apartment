@@ -47,38 +47,38 @@ function Header() {
       {/*  */}
       
           <Drawer open={isOpen} onClose={()=>setIsOpen(false)} anchor='left' sx={{width:"100%"}}>
-        <Box width={"230px"}>
+        <Box width={"260px"}>
           
           <Typography className='text-center py-2 font-bold text-[30px]'>Wintana Apartment</Typography>
 
           <List>
             <Link href="/" onClick={()=>setIsOpen(false)}>
               <ListItem>
-                Home
+                Back Home
               </ListItem>
             </Link>
             <Link href="/floors/commercial/commercial-buildings" onClick={()=>setIsOpen(false)}>
-              <ListItem>
-                Commercial retailer
+              <ListItem className='font-bold text-[20px]'>
+                Commercial Retailer Area
               </ListItem>
             </Link>
             
            
               <ListItem>
               <Accordion className="w-full">
-                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 1</AccordionSummary>
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>} className='font-bold text-[20px]'>First floor Apartments</AccordionSummary>
                 <AccordionDetails>
-                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with single Room
                   </Link>
                   
                   
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 2 Rooms
                   </Link>
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 3 Rooms
                   </Link>
                 </AccordionDetails>
                 </Accordion>
@@ -86,19 +86,19 @@ function Header() {
             
               <ListItem>
               <Accordion className="w-full">
-                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 2</AccordionSummary>
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>} className='font-bold text-[20px]'>Second floor Apartments</AccordionSummary>
                 <AccordionDetails>
-                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with single Room
                   </Link>
                   
                   
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 2 Rooms
                   </Link>
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 3 Rooms
                   </Link>
                 </AccordionDetails>
                 </Accordion>
@@ -106,19 +106,19 @@ function Header() {
             
               <ListItem>
               <Accordion className="w-full">
-                <AccordionSummary expandIcon={<KeyboardArrowDown/>}>Floor 3</AccordionSummary>
+                <AccordionSummary expandIcon={<KeyboardArrowDown/>} className='font-bold text-[20px]'>Third floor Apartments</AccordionSummary>
                 <AccordionDetails>
-                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}>Room 1
+                  <Link href="/book/room-1" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with single Room
                   </Link>
                   
                   
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}>Room 2
+                  <Link href="/book/room-2" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 2 Rooms
                   </Link>
                 </AccordionDetails>
                 <AccordionDetails>
-                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}>Room 3
+                  <Link href="/book/room-3" onClick={()=>setIsOpen(false)}> <Apartment fontSize='small' color='secondary'/> Apartment with 3 Rooms
                   </Link>
                 </AccordionDetails>
                 </Accordion>

@@ -15,13 +15,11 @@ import React from "react";
 
 const SportAndLeisure = () => {
   const imagePaths = [
-    { path: "/bar.webp", service: "Bar restaurant" },
-    { path: "/billard.jpeg", service: "Billard" },
-    { path: "/massage.jpeg", service: "Massage" },
-    { path: "/sauna2.jpeg", service: "Sauna" },
-    { path: "/sauna.webp", service: "Sauna & Massage" },
-    { path: "/billard2.jpeg", service: "Billard 2" },
-    { path: "/room3.jpeg", service: "Accomodation" },
+    { path: "/bar.webp", service: "Bar restaurant",open:false },
+    { path: "/massage.jpeg", service: "Massage",open:false },
+    { path: "/sauna2.jpeg", service: "Sauna",open:false },
+    { path: "/sauna.webp", service: "Sauna & Massage",open:false },
+    { path: "/room3.jpeg", service: "Accomodation",open:true },
   ];
 
   return (
@@ -39,7 +37,7 @@ const SportAndLeisure = () => {
       {/* Use Masonry component instead of ImageList */}
       <Masonry columns={{ xs: 3, sm: 4, md: 5 }} gap={16}>
         {imagePaths.map((item, index) => (
-          <ImageListItem key={index}>
+          <ImageListItem key={index} className="relative">
             <Image
               src={item.path}
               alt={`Image ${index + 1}`}
@@ -50,6 +48,10 @@ const SportAndLeisure = () => {
               title={item.service}
               sx={{ height: { xs: "30px", sm: "35px", md: "40px" } }}
             />
+            {item.open ?
+              <p className="bg-green-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Open Now</p>
+              :
+              <p className="bg-red-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Comming Soon</p>}
           </ImageListItem>
         ))}
       </Masonry>

@@ -73,13 +73,13 @@ const Page = ({ params }) => {
             </Typography>
             <Stack direction="row" spacing={2}>
               <Button
-                variant="contained"
+                variant="outlined"
                 color="success"
                 onClick={() => setIsOpen(true)}
               >
                 Book Room Now
               </Button>
-              <Button variant="contained" color="info" onClick={scrollUSer}>
+              <Button variant="outlined" color="info" onClick={scrollUSer}>
                 Contact Us
               </Button>
             </Stack>
@@ -94,32 +94,13 @@ const Page = ({ params }) => {
             >
               <SwiperSlide>
                 <Image
-                  src={"/retailer2.jpeg"}
+                  src={"/retailer1.jpeg"}
                   alt={`commerial hub`}
                   width={200}
                   height={300}
                   className="w-[100%] h-auto"
                 />
-                <ImageListItemBar title="Commercial room 1" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={"/retailer2.jpeg"}
-                  alt={`commerial hub`}
-                  width={200}
-                  height={300}
-                  className="w-[100%] h-auto"
-                />
-                <ImageListItemBar title="Commercial room 2" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={"/reatiler3.jpeg"}
-                  alt={`commerial hub`}
-                  width={200}
-                  height={300}
-                  className="w-[100%] h-auto"
-                />
+                <ImageListItemBar title="Comming Soon" />
               </SwiperSlide>
               <SwiperSlide>
                 <Image
@@ -129,7 +110,28 @@ const Page = ({ params }) => {
                   height={300}
                   className="w-[100%] h-auto"
                 />
-                <ImageListItemBar title="Commercial room 3" />
+                <ImageListItemBar title="Comming Soon" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src={"/retailer1.jpeg"}
+                  alt={`commerial hub`}
+                  width={200}
+                  height={300}
+                  className="w-[100%] h-auto"
+                  
+                />
+                <ImageListItemBar title="Comming Soon" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Image
+                  src={"/retailer1.jpeg"}
+                  alt={`commerial hub`}
+                  width={200}
+                  height={300}
+                  className="w-[100%] h-auto"
+                />
+                <ImageListItemBar title="Comming Soon" />
               </SwiperSlide>
             </Swiper>
           </ImageListItem>
@@ -166,7 +168,7 @@ const Page = ({ params }) => {
             <DialogActions>
               <Button
                 className="bg-green-500"
-                variant="contained"
+                variant="outlined"
                 color="secondary"
               >
                 Send Enquiry

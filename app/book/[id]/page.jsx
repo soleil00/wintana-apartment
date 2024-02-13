@@ -143,7 +143,7 @@ const Page = () => {
             >
               {thumbImages.map((thumb, index) => (
                 <SwiperSlide key={index}>
-                  <Image
+                  <img
                     key={thumb.id}
                     src={thumb.path}
                     alt={`Thumbnail ${index + 1}`}
@@ -167,7 +167,8 @@ const Page = () => {
             padding={"10px"}
           >
             <h3 className="font-bold text-[25px]">
-              Here is all You can find in Room {id}
+              {/* Here is all You can find in Room {id} */}
+               Apartment with {id ===1? "Single Room":id === 2 ? "2 rooms" :"3 rooms"} includes the following:
             </h3>
             <Grid container spacing={2}>
               <Grid
@@ -178,7 +179,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <People color="secondary" fontSize={"large"} />
-              <p className="text-sm">{id ===1?1:id===2?2:3} People</p>
+              <p className="text-sm">{id ===1?"1 Room":id===2?"2 Room":"3 Room"}</p>
               </Grid>
               <Grid
                 item
@@ -198,7 +199,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Bathroom color="secondary" fontSize={"large"} />
-                <p className="text-sm">{id ===1?"1 bathroom":"1 bathroom for each person"}</p>
+                <p className="text-sm">{id ===1?"1 bathroom":"1 bathroom for each Room"}</p>
               </Grid>
               <Grid
                 item
@@ -208,7 +209,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Accessible color="secondary" fontSize={"large"} />
-                <p className="text-sm">{id ===1?"1 toliet":"1 toilet for each person"}</p>
+                <p className="text-sm">{id ===1?"1 toliet":"1 toilet for each Room"}</p>
               </Grid>
               <Grid
                 item

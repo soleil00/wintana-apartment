@@ -2,10 +2,12 @@
 
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const OurServices = () => {
   return (
+    <Link href={"/comming-soon"}>
     <Box
       className="max-w-[1224px] w-full mx-auto"
       sx={{ paddingX: { xs: "10px", sm: "0px", md: "opx" } }}
@@ -28,8 +30,8 @@ const OurServices = () => {
     <Typography>Enjoy a refreshing dip in our pristine swimming pool.</Typography>
   </Stack>
   <Stack marginBottom={"20px"}>
-    <h3 className="font-bold text-[25px] ">Accommodation Services</h3>
-    <Typography>Relax and unwind in our comfortable accommodations.</Typography>
+    <h3 className="font-bold text-[25px] ">Accommodation Services(Rent/Buy)</h3>
+    <Typography>Relax and unwind in our comfortable accommodations. where you can chooce to rent apartment or buy it</Typography>
   </Stack>
   <Stack marginBottom={"20px"}>
     <h3 className="font-bold text-[25px] ">Commercial Building for Rent</h3>
@@ -47,7 +49,8 @@ const OurServices = () => {
           />
         </Stack>
       </Paper>
-    </Box>
+      </Box>
+      </Link>
   );
 };
 

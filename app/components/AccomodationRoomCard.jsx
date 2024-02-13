@@ -13,6 +13,7 @@ import React from "react";
 
 const cardStyles = {
   maxWidth: "100%",
+  position:"relative",
 };
 
 const imageStyles = {
@@ -31,6 +32,7 @@ const AccomodationRoomCard = ({
   rooms,
   link,
   description,
+  available
 }) => {
   return (
     <Grid item {...display}>
@@ -52,6 +54,8 @@ const AccomodationRoomCard = ({
             >
               {title}
             </Typography>
+
+            {available && <p className="bg-red-700 px-3 py-1 text-white font-bold rounded-md absolute top-1 right-1">Comming soon</p>}
 
             {type !== "commercial" && (
               <Stack
@@ -75,7 +79,7 @@ const AccomodationRoomCard = ({
                     >
                       <BedroomParentIcon fontSize="medium" color="secondary" />
                       <Typography variant="body2">
-                        3 full furnished rooms
+                        3 full furnished apartments
                       </Typography>
                     </Stack>
                     <Typography

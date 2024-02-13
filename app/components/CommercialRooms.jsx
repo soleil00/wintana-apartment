@@ -18,14 +18,7 @@ const CommercialRooms = () => {
       </Stack>
 
       <Grid container spacing={2}>
-        {/* <AccomodationRoomCard
-          path={"/reatiler3.jpeg"}
-          room={4}
-          display={{ xs: 12, sm: 6, md: 4 }}
-          title={"Commercial Retail Room"}
-          type={"commercial"}
-          link={"/floors/commercial/commercial-room-1"}
-        /> */}
+       
         <AccomodationRoomCard
           path={"/retailer1.jpeg"}
           room={4}
@@ -33,15 +26,9 @@ const CommercialRooms = () => {
           title={"Commercial Retail Room"}
           type={"commercial"}
           link={"/floors/commercial/commercial-room-2"}
+          available={true}
         />
-        {/* <AccomodationRoomCard
-          path={"/retailer2.jpeg"}
-          room={4}
-          display={{ xs: 12, sm: 6, md: 4 }}
-          title={"Commercial Retail Room"}
-          type={"commercial"}
-          link={"/floors/commercial/commercial-room-3"}
-        /> */}
+       
       </Grid>
     </Container>
   );
@@ -49,19 +36,4 @@ const CommercialRooms = () => {
 
 export default CommercialRooms;
 
-{
-  /* <Stack
-        direction={{ xs: "column", sm: "row", md: "row" }}
-        justifyContent={"center"}
-        alignItems={"center"}
-        spacing={2}
-      > */
-}
-{
-  /* <CommercialRoomCard path={"/retailer1.jpeg"} room={1} />
-        <CommercialRoomCard path={"/retailer2.jpeg"} room={2} />
-        <CommercialRoomCard path={"/reatiler3.jpeg"} room={3} /> */
-}
-{
-  /* </Stack> */
-}
+

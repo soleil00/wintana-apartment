@@ -58,8 +58,8 @@ function ContactComp({ visible }) {
   };
 
   return (
-    <div className="bg-gray-400 w-[100%] mt-auto" id="contact">
-      <Container className="max-w-[1224px] w-full mx-auto py-4 mt-auto">
+    <div className="bg-gray-400 w-[100%] testing-mg" id="contact">
+      <Container className="max-w-[1224px] w-full mx-auto py-4 ">
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
           justifyContent={{ xs: "none", sm: "none", md: "space-between" }}
