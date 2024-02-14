@@ -1,4 +1,7 @@
 // Import the Masonry component from @mui/lab
+"use client"
+
+
 import { Masonry } from "@mui/lab";
 
 import {
@@ -11,6 +14,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const SportAndLeisure = () => {
@@ -21,6 +25,8 @@ const SportAndLeisure = () => {
     { path: "/sauna.webp", service: "Sauna & Massage",open:false },
     { path: "/room3.jpeg", service: "Accomodation",open:true },
   ];
+
+  const navigator=useRouter()
 
   return (
     <Container className="max-w-[1224px] w-full mx-auto">
@@ -43,6 +49,7 @@ const SportAndLeisure = () => {
               alt={`Image ${index + 1}`}
               width={300}
               height={index % 2 === 0 ? 400 : 300}
+              onClick={()=>navigator.push("/comming-soon")}
             />
             <ImageListItemBar
               title={item.service}

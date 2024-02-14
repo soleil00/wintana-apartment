@@ -209,7 +209,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <People color="secondary" fontSize={"large"} />
-              <p className="text-sm">{id ===1?"1 Room":id===2?"2 Room":"3 Room"}</p>
+              <p className="text-sm">{id ===1?"1 Room":id===2?"2 Rooms":"3 Rooms"}</p>
               </Grid>
               <Grid
                 item
@@ -219,7 +219,7 @@ const Page = () => {
                 className="flex flex-row justify-center items-center gap-1"
               >
                 <Bed color="secondary" fontSize={"large"} />
-                <p className="text-sm">{id ===1?1:id===2?2:3}  Beds</p>
+                <p className="text-sm">{id ===1?"1 Bed":id===2?"2 Beds":"3 Beds"}  </p>
               </Grid>
               <Grid
                 item

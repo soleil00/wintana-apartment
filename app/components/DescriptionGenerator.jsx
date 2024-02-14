@@ -9,7 +9,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
         <Stack>
           {selectedId === 0 ? (
             <Typography>
-              Welcome to a bathroom oasis that seamlessly blends functionality
+              This bathroom oasis that seamlessly blends functionality
               with modern design. This sophisticated space features a unique
               2-in-1 bathroom and toilet, meticulously crafted for single-person
               usage.
