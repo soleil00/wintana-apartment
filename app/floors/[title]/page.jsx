@@ -6,6 +6,7 @@ import ContactComp from "@/app/components/ContactComp";
 import FooterComp from "@/app/components/FooterComp";
 import { Email, Facebook, Instagram, LocationOn, Twitter, WhatsApp } from "@mui/icons-material";
 import { Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import React,{useState} from "react";

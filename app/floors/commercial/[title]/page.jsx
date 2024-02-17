@@ -20,7 +20,7 @@ import { Masonry } from "@mui/lab";
 import React, { useState } from "react";
 import ContactComp from "@/app/components/ContactComp";
 import BottomControll from "@/app/components/BottomControll";
-import Swipper4 from "@/app/components/swippper/Swipper4";
+
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -65,12 +65,7 @@ const Page = ({ params }) => {
               imminent, this bustling area is set to welcome businesses and
               customers alike
             </Typography>
-            {/* <Typography className=" pr-3">
-              Discover a versatile retail hub that caters to various businesses,
-              from fashion to electronics. Located for maximum accessibility,
-              this retail space enhances the Wintana community, creating a
-              bustling marketplace right at the heart of the apartment complex.
-            </Typography> */}
+          
             <Stack direction="row" spacing={2}>
               <Button
                 variant="outlined"

@@ -20,7 +20,7 @@ const Page = () => {
     },[width])
     
     return (
-      <>
+      <div className='relative min-h-screen'>
     <Container className="pt-[65px] min-h-screen">
         <Stack
           flexDirection={"column"}
@@ -82,7 +82,7 @@ const Page = () => {
             </Container>
             <Stack marginBottom={{xs:0,sm:"150px",md:"300px"}}></Stack>
             <ContactComp visible={true}/>
-            </>
+            </div>
   )
 }
 
