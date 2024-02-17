@@ -19,7 +19,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
             <Stack>
               <Typography sx={{ paddingBottom: "20px" }}>
                     modern salon, complete with sleek sofas, a modern TV, and a
-                    stylish dining area. It's a chic space designed for
+                    stylish dining area. It&apos;s a chic space designed for
                     relaxation and entertainment, where style and comfort
                     meet seamlessly.
               </Typography>
