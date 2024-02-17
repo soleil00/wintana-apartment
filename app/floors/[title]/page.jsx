@@ -142,7 +142,7 @@ const page = ({ params }) => {
       
      
        <div className="bg-gray-400 w-[100%] testing-mg " id="contact">
-      <Container className="max-w-[1224px] w-full mx-auto py-4 ">
+      <Container className="max-w-[1224px] w-full mx-auto py-2 ">
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
           justifyContent={{ xs: "none", sm: "none", md: "space-between" }}

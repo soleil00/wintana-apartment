@@ -67,7 +67,7 @@ const AccomodationRoom = () => {
           path={"/apartment/view4.png"}
           display={{ xs: 6, sm: 4, md: 4 }}
           title={"Pent house(fourth floor) "}
-          link={"/floors/floor-3"}
+          link={"/comming-soon"}
           rooms={3}
           pent={true}
         />

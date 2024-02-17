@@ -137,10 +137,9 @@ const Page = ({ params }) => {
           </ImageListItem>
         </Stack>
 
-        <Swipper4 />
       </Container>
       <Stack display={{xs:"block",md:"none"}}>
-        <BottomControll />
+      
         <BottomControll />
         <BottomControll />
         <BottomControll />
