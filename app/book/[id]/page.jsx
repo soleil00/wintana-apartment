@@ -47,6 +47,7 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
   { path: "/room1/1roomkitchen.jpg", id: 2 },
   { path: "/room1/1roomsalon.jpg", id: 3 },
   { path: "/room1/1roombed.jpg", id: 4 },
+  { path: "/room1/1roomward.jpg", id: 5 },
 ];
 
  const thumbImages2 = [
@@ -55,8 +56,8 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
   { path: "/room2/2roomwashroom1.jpg", id: 3 },
   { path: "/room2/2roomwashroom2.jpg", id: 4 },
   { path: "/room2/2roomsalon1.jpg", id: 5 },
-  { path: "/room2/2roomsalon2.jpg", id: 6 },
-  { path: "/room2/2roomkitchen1.jpg", id: 7 },
+  // { path: "/room2/2roomsalon2.jpg", id: 6 },
+  { path: "/room2/2roomdinning.jpg", id: 7 },
   { path: "/room2/2roomkitchen1.jpg", id: 8 },
 ];
 
@@ -114,6 +115,8 @@ const Page = () => {
     
     window.addEventListener("resize", handleResize);
 
+
+
     return () => {
       window.removeEventListener("resize", handleResize);
   
@@ -121,7 +124,7 @@ const Page = () => {
   }, [selectedId, thumbImages]);
 
   return (
-    <>
+    <div className="relative min-h-screen">
       <Box
         className="mt-[65px] min-h-screen max-w-[1224px] w-full mx-auto"
         padding={{ xs: "10px", sm: "10px", md: "10px" }}
@@ -323,6 +326,13 @@ const Page = () => {
         </Stack>
       </Box>
       {/* <BottomControll /> */}
+      <Stack display={{xs:"block",sm:"block",md:"none"}}>
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+      </Stack>
+        <BottomControll />
       <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
@@ -368,7 +378,7 @@ const Page = () => {
         
             <Image width={200} height={200} src={thumbImages[selectedImageIndex]?.path} className="w-auto h-auto" alt="selected image her"/>
       </Dialog>
-    </>
+    </div>
   );
 };
 

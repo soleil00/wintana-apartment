@@ -24,6 +24,7 @@ import Swipper3 from "./components/swippper/Swipper3";
 import Swipper2 from "./components/swippper/Swipper2";
 import Swipper1 from "./components/swippper/Swipper1";
 import Swipper4 from "./components/swippper/Swipper4";
+import { Stack } from "@mui/material";
 
 
 export default function Home() {
@@ -82,6 +83,12 @@ export default function Home() {
 
       {/* contact page */}
       <BottomControll/>
+      <BottomControll/>
+      <Stack display={{xs:"block",md:"none"}}>
+        <BottomControll/>
+      <BottomControll/>
+      <BottomControll/>
+      </Stack>
       <ContactComp visible={"soleil"} />
 
       {/* footer */}

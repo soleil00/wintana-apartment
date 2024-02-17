@@ -21,7 +21,7 @@ const Page = () => {
     
     return (
       <>
-    <Container className="pt-[65px]">
+    <Container className="pt-[65px] min-h-screen">
         <Stack
           flexDirection={"column"}
           spacing={5}
@@ -43,7 +43,7 @@ const Page = () => {
           path={"/bar.webp"}
           room={4}
           display={{ xs: 12, sm: 4, md: 3 }}
-          title={"Bar and Kitchen"}
+          title={"Bar and Restaurant"}
           type={"commercial"}
                   link={"/comming-soon"}
                   available={"true"}
@@ -52,7 +52,25 @@ const Page = () => {
           path={"/sauna2.jpeg"}
           room={4}
           display={{ xs: 12, sm: 4, md: 3 }}
-          title={"Sauna"}
+          title={"Sauna and Massage"}
+          type={"commercial"}
+                  link={"/comming-soon"}
+                  available={"true"}
+        /> 
+        <AccomodationRoomCard
+          path={"/gym.jpg"}
+          room={4}
+          display={{ xs: 12, sm: 4, md: 3 }}
+          title={"Gymastic"}
+          type={"commercial"}
+                  link={"/comming-soon"}
+                  available={"true"}
+        /> 
+        <AccomodationRoomCard
+          path={"/coffe.jpg"}
+          room={4}
+          display={{ xs: 12, sm: 4, md: 3 }}
+          title={"Coffe shop"}
           type={"commercial"}
                   link={"/comming-soon"}
                   available={"true"}

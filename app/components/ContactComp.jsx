@@ -2,6 +2,7 @@
 
 import {
   Call,
+  Email,
   Facebook,
   Google,
   Instagram,
@@ -58,7 +59,7 @@ function ContactComp({ visible }) {
   };
 
   return (
-    <div className="bg-gray-400 w-[100%] testing-mg" id="contact">
+    <div className="bg-gray-400 w-[100%] testing-mg absolute bottom-0 right-0 left-0" id="contact">
       <Container className="max-w-[1224px] w-full mx-auto py-4 ">
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
@@ -126,6 +127,10 @@ function ContactComp({ visible }) {
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <Twitter color="secondary" fontSize="large" />
                 <Typography>@Wintana23</Typography>
+              </Stack>
+              <Stack direction={"row"} spacing={2} alignContent={"center"}>
+                <Email color="secondary" fontSize="large" />
+                <Typography>sbhatuare@yahoo.com</Typography>
               </Stack>
             </Stack>
           </Stack>

@@ -26,7 +26,14 @@ const SportAndLeisure = () => {
     { path: "/room3.jpeg", service: "Accomodation",open:true },
   ];
 
-  const navigator=useRouter()
+  const navigator = useRouter()
+  
+   const scrollUser=()=>{
+    const target=document.getElementById("accomodation")
+    if (target) {
+      target.scrollIntoView({behavior:"smooth"})
+    }
+  }
 
   return (
     <Container className="max-w-[1224px] w-full mx-auto">
@@ -41,7 +48,7 @@ const SportAndLeisure = () => {
       </Typography>
 
       {/* Use Masonry component instead of ImageList */}
-      <Masonry columns={{ xs: 3, sm: 4, md: 5 }} gap={16}>
+      <Masonry columns={{ xs: 2, sm: 3, md: 5 }} gap={16}>
         {imagePaths.map((item, index) => (
           <ImageListItem key={index} className="relative">
             <Image
@@ -49,16 +56,20 @@ const SportAndLeisure = () => {
               alt={`Image ${index + 1}`}
               width={300}
               height={index % 2 === 0 ? 400 : 300}
-              onClick={()=>navigator.push("/comming-soon")}
+              onClick={() => {
+                if (item.open) {
+                  scrollUser()
+                } else navigator.push("/comming-soon")
+              }}
             />
             <ImageListItemBar
               title={item.service}
               sx={{ height: { xs: "30px", sm: "35px", md: "40px" } }}
             />
             {item.open ?
-              <p className="bg-green-700 text-white absolute px-1 py-0.5 rounded-md top-0 right-0">Open Now</p>
+              <p className="bg-green-700 whitespace-nowrap text-white md:px-1 absolute px-1 py-0.5 rounded-md top-0 right-0">Open Now</p>
               :
-              <p className="bg-red-700 text-white absolute px-3 py-1 rounded-md top-0 right-0">Openning Soon</p>}
+              <p className="bg-red-700 text-white absolute px-3 md:px-1 py-1 rounded-md top-0 right-0">Openning Soon</p>}
           </ImageListItem>
         ))}
       </Masonry>

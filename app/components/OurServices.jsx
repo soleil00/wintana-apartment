@@ -34,6 +34,10 @@ const OurServices = () => {
     <Typography>Relax and unwind in our comfortable accommodations. where you can chooce to rent apartment or buy it</Typography>
   </Stack>
   <Stack marginBottom={"20px"}>
+    <h3 className="font-bold text-[25px] ">Penting house</h3>
+    <Typography> luxurious penthouse for an elevated living experience with 5 living rooms</Typography>
+  </Stack>
+  <Stack marginBottom={"20px"}>
     <h3 className="font-bold text-[25px] ">Commercial Building for Rent</h3>
     <Typography>Explore our commercial spaces for rent, ideal for your business needs.</Typography>
   </Stack>

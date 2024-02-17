@@ -32,7 +32,8 @@ const AccomodationRoomCard = ({
   rooms,
   link,
   description,
-  available
+  available,
+  pent
 }) => {
   return (
     <Grid item {...display}>
@@ -79,7 +80,7 @@ const AccomodationRoomCard = ({
                     >
                       <BedroomParentIcon fontSize="medium" color="secondary" />
                       <Typography variant="body2">
-                        3 full furnished apartments
+                        {pent ? "5 living rooms" :"3 full furnished apartments"}
                       </Typography>
                     </Stack>
                     <Typography

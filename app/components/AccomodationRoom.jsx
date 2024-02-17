@@ -18,41 +18,29 @@ const imageStyles = {
 
 const AccomodationRoom = () => {
   return (
-    <Container>
+    <Container id="accomodation">
       <Typography
         variant="h5"
         gutterBottom
         py={"20px"}
         textAlign={{ xs: "center", sm: "start", md: "start" }}
+        
       >
         Welcome to Wintana Residential Area
       </Typography>
 
       <Typography
-        className="py-2 text-gray-400"
+        className="py-2 text-gray-500"
         textAlign={{ xs: "center", sm: "start", md: "start" }}
       >
-        Explore Wintana Apartments residential area,Wintana accomodation
-        services consist of 3 floors designed for accomodations starting from
-        First to Fourth floors
+        
+        Explore Wintana Apartments' residential area, where accommodation
+        services are spread across three floors, from the first to
+        the third. Additionally, there's a fourth floor featuring a
+        luxurious penthouse for an elevated living experience
       </Typography>
-      <Typography
-        className="py-2 text-gray-600"
-        textAlign={{ xs: "center", sm: "start", md: "start" }}
-      >
-        Each Floor has 3 Apartments which are described below:
-      </Typography>
-      <Typography
-        className="pb-2 text-slate-400"
-        textAlign={{ xs: "center", sm: "start", md: "start" }}
-      >
-        The first Apartment switable for single person made up of{" "}
-        <span className="font-bold">1 Room</span>, the second provides{" "}
-        <span className="font-bold">2 Room</span>, and the third is a
-        spacious retreat with <span className="font-bold">3 Rooms</span>.
-        Each room has 1 kitchen, 1 bathroom and 1 Toilet except for second
-        and third apartments which shares common Kitchen and salon fro all rooms.
-      </Typography>
+     
+    
       <Grid container spacing={2}>
         <AccomodationRoomCard
           path={"/apartment/view2.png"}
@@ -75,18 +63,15 @@ const AccomodationRoom = () => {
           link={"/floors/floor-3"}
           rooms={3}
         />
-        {/* <AccomodationRoomCard
-          path={"/living-room.webp"}
-          display={{ xs: 6, sm: 4, md: 3 }}
-          title={"Floor 4"}
-          link={"/"}
-        /> */}
-        {/* <AccomodationRoomCard
-          path={"/room1.jpeg"}
-          display={{ xs: 6, sm: 4, md: 3 }}
-          title={"Floor 5"}
-          link={"/"}
-        /> */}
+        <AccomodationRoomCard
+          path={"/apartment/view4.png"}
+          display={{ xs: 6, sm: 4, md: 4 }}
+          title={"Pent house(fourth floor) "}
+          link={"/floors/floor-3"}
+          rooms={3}
+          pent={true}
+        />
+       
       </Grid>
     </Container>
   );

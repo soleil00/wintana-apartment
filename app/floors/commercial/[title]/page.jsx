@@ -45,7 +45,7 @@ const Page = ({ params }) => {
   };
 
   return (
-    <>
+    <div className="relative min-h-screen">
       <Container className="pt-[65px]">
         <Stack
           flexDirection={{ xs: "column", sm: "row", md: "row" }}
@@ -55,29 +55,29 @@ const Page = ({ params }) => {
         >
           <Stack width={{ xs: "100%", sm: "50%", md: "50%" }} spacing={2}>
             <Typography variant="h4" gutterBottom textAlign={"center"}>
-              Wintana Commercial Retailer Rooms
+              Wintana Commercial Retailer Area
             </Typography>
             <Typography className=" pr-3">
-              Welcome to the vibrant first-floor retail space at Wintana
-              Apartment! This expansive commercial hall offers retailers a
-              dynamic environment to showcase their products. Clever
-              partitioning allows businesses to create unique sections,
-              providing residents and visitors with a diverse and engaging
-              shopping experience.
+              Wintana Apartment's ground floor is a spacious hub designated
+              for commercial use, rented by square meters accordingly.
+              It's currently undergoing preparations to transform into a
+              vibrant space for shops and retailer services. With its opening
+              imminent, this bustling area is set to welcome businesses and
+              customers alike
             </Typography>
-            <Typography className=" pr-3">
+            {/* <Typography className=" pr-3">
               Discover a versatile retail hub that caters to various businesses,
               from fashion to electronics. Located for maximum accessibility,
               this retail space enhances the Wintana community, creating a
               bustling marketplace right at the heart of the apartment complex.
-            </Typography>
+            </Typography> */}
             <Stack direction="row" spacing={2}>
               <Button
                 variant="outlined"
                 color="success"
                 onClick={() => setIsOpen(true)}
               >
-                Book Room Now
+                Book Your Space Today
               </Button>
               <Button variant="outlined" color="info" onClick={scrollUSer}>
                 Contact Us
@@ -139,7 +139,13 @@ const Page = ({ params }) => {
 
         <Swipper4 />
       </Container>
-      {/* <BottomControll /> */}
+      <Stack display={{xs:"block",md:"none"}}>
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+       
+      </Stack>
       <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
@@ -177,7 +183,7 @@ const Page = ({ params }) => {
           </Stack>
         </DialogContent>
       </Dialog>
-    </>
+    </div>
   );
 };
 
