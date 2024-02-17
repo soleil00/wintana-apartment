@@ -17,7 +17,7 @@ const page = ({ params }) => {
   const last = +title[title.length - 1];
   const id = last
   return (
-    <>
+    <div className="relative min-h-screen">
       <Container
         sx={{ marginTop: { xs: "67px", sm: "69px", md: "72px" } }}
         className="relative"
@@ -163,9 +163,16 @@ const page = ({ params }) => {
         /> */}
         </Grid>
       </Container>
-      <BottomControll />
+      
+      <Stack display={{xs:"block",md:"none"}}>
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+        <BottomControll />
+        {/* <BottomControll /> */}
+      </Stack>
       <ContactComp visible={true} />
-    </>
+    </div>
   );
 };
 
