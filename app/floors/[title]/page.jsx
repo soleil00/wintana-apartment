@@ -8,15 +8,45 @@ import { Email, Facebook, Instagram, LocationOn, Twitter, WhatsApp } from "@mui/
 import { Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React,{useState} from "react";
 
 const page = ({ params }) => {
+    const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const { title } = params;
   const regex = /[%]\d+/gi;
   const reg2 = /\-/gi;
   const goodTitle = title.replace(regex, " ");
   const last = +title[title.length - 1];
   const id = last
+
+    const handleSendMessage = async () => {
+    if (email && message) {
+      try {
+        const response = await axiosClient.post("/api/message", {
+          email,
+          message,
+        });
+
+        setEmail("");
+        setMessage("");
+
+        console.log("response:", response);
+
+        if (response.status === 200) {
+          console.log("Email sent successfully");
+          // You may want to handle success in your UI
+        } else {
+          console.error("Error:", response.statusText);
+          // Handle the error as needed
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // Handle the error as needed
+      }
+    }
+  };
+
   return (
     <div className="relative min-h-screen">
       <Container
