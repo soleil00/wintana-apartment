@@ -10,9 +10,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React,{useState} from "react";
 
-const page = ({ params }) => {
-    const [email, setEmail] = useState("");
+const Page = ({ params }) => {
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  
+  const axiosClient = axios.create({
+    baseURL: "https://wintana-api.vercel.app/",
+  });
   const { title } = params;
   const regex = /[%]\d+/gi;
   const reg2 = /\-/gi;
@@ -35,14 +39,14 @@ const page = ({ params }) => {
 
         if (response.status === 200) {
           console.log("Email sent successfully");
-          // You may want to handle success in your UI
+         
         } else {
           console.error("Error:", response.statusText);
-          // Handle the error as needed
+          
         }
       } catch (error) {
         console.error("Error:", error);
-        // Handle the error as needed
+    
       }
     }
   };
@@ -284,4 +288,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
