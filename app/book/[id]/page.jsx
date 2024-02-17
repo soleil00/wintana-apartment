@@ -333,6 +333,7 @@ const Page = () => {
         <BottomControll />
       </Stack>
         <BottomControll />
+        <BottomControll />
       <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
