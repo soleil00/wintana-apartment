@@ -15,14 +15,14 @@ const WintanIntro = () => {
           </p> */}
         <p className="my-3"> Wintana Apartment is a five-floor building
           with an additional ground floor designated for commercial use.
-          From the first to the third floors, there are a total of nine
+          From the first to the third floor, there are a total of nine
           fully furnished apartments, with each floor containing three
           apartments. The first apartment on each floor consists of a
           full kitchen, full bathroom, dinning area, sofa, and a single
           living room. The second apartment offers two living rooms, full kitchen,
           two full bathrooms, sofa, and dinning area. The third apartment
-          provides three living rooms,full kitchen, three full bathrooms,dinning, sofa, and dining
-          room. The fourth floor hosts a luxurious penthouse featuring
+          provides three living rooms,full kitchen, three full bathrooms,sofa, and dining
+          area. The fourth floor hosts a luxurious penthouse featuring
           five rooms. On the fifth floor, residents can enjoy upscale
           amenities including a swimming pool, bar, sauna, gym, and
           restaurant.
