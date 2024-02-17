@@ -34,9 +34,9 @@ const AccomodationRoom = () => {
         textAlign={{ xs: "center", sm: "start", md: "start" }}
       >
         
-        Explore Wintana Apartments' residential area, where accommodation
+        Explore Wintana Apartments&apos; residential area, where accommodation
         services are spread across three floors, from the first to
-        the third. Additionally, there's a fourth floor featuring a
+        the third. Additionally, there&apos;s a fourth floor featuring a
         luxurious penthouse for an elevated living experience
       </Typography>
      

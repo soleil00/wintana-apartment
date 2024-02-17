@@ -58,7 +58,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
     </Typography>
   ) : selectedId === 4 ? (
     <Typography>
-      This is salon including nice sofa and dinning area, a shared by all living rooms. It's a comfortable space to relax and socialize.
+      This is salon including nice sofa and dinning area, a shared by all living rooms. It&apos;s a comfortable space to relax and socialize.
     </Typography>
   ) : selectedId === 5? (
     <Typography>

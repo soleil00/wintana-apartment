@@ -58,9 +58,9 @@ const Page = ({ params }) => {
               Wintana Commercial Retailer Area
             </Typography>
             <Typography className=" pr-3">
-              Wintana Apartment's ground floor is a spacious hub designated
+              Wintana Apartment&apos;s ground floor is a spacious hub designated
               for commercial use, rented by square meters accordingly.
-              It's currently undergoing preparations to transform into a
+              It&apos;s currently undergoing preparations to transform into a
               vibrant space for shops and retailer services. With its opening
               imminent, this bustling area is set to welcome businesses and
               customers alike

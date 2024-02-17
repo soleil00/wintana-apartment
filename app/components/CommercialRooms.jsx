@@ -9,7 +9,7 @@ const CommercialRooms = () => {
       <Stack spacing={2} padding={{ xs: "10px" }}>
         <Typography variant="h4">Wintana Commercial Retailer Area</Typography>
         <Typography className="py-2 text-gray-500">
-          Wintana Apartment's ground floor is big hub designated
+          Wintana Apartment&apos;s ground floor is big hub designated
           for commercial uses rented by square
           meters accordingly and its getting ready to become a
           lively place for shops and retailer-servcies. 
