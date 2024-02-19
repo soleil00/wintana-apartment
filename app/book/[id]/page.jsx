@@ -326,11 +326,7 @@ const Page = () => {
         </Stack>
       </Box>
       {/* <BottomControll /> */}
-      <Stack display={{xs:"block",sm:"block",md:"none"}}>
-        <BottomControll />
-        <BottomControll />
-        <BottomControll />
-        <BottomControll />
+      <Stack height={{xs:"550px",sm:"500px",md:"100px"}}>
       </Stack>
         <BottomControll />
         <BottomControll />
