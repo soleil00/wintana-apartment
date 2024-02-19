@@ -147,6 +147,10 @@ const Page = () => {
               thumbs={{ swiper: thumbsSwiper,slideThumbActiveClass:"testls" }}
               modules={[FreeMode, Navigation, Thumbs]}
               className="h-[80%] w-full"
+              onSlideChange={() => {
+  setSelectedId(prev => (prev + 1) % thumbImages.length);
+}}
+
             >
               {thumbImages.map((thumb, index) => (
                 <SwiperSlide key={index}>
