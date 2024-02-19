@@ -147,9 +147,9 @@ const Page = () => {
               thumbs={{ swiper: thumbsSwiper,slideThumbActiveClass:"testls" }}
               modules={[FreeMode, Navigation, Thumbs]}
               className="h-[80%] w-full"
-              onSlideChange={() => {
-  setSelectedId(prev => (prev + 1) % thumbImages.length);
-}}
+//               onSlideChange={() => {
+//   setSelectedId(prev => (prev + 1) % thumbImages.length);
+// }}
 
             >
               {thumbImages.map((thumb, index) => (
@@ -330,10 +330,10 @@ const Page = () => {
         </Stack>
       </Box>
       {/* <BottomControll /> */}
-      <Stack height={{xs:"550px",sm:"500px",md:"100px"}}>
-      </Stack>
-        <BottomControll />
-        <BottomControll />
+      {/* <Stack height={{xs:"550px",sm:"500px",md:"100px"}}>
+      </Stack> */}
+        {/* <BottomControll />
+        <BottomControll /> */}
       <ContactComp visible={true} />
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>

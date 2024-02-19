@@ -6,7 +6,7 @@ import { AppBar, IconButton, Stack, Toolbar, Typography ,Box,Drawer, ListItem, L
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-function Header() {
+function Header({visible}) {
   const [isOpen,setIsOpen] = useState(false)
 
   const scrollUser=()=>{
@@ -36,7 +36,7 @@ function Header() {
         <Stack direction={"row"} spacing={{ xs: 2, sm: 3, md: 7 }} padding={"10px"} display={{xs:"none",sm:"none",md:"block"}} alignItems={"center"}>
           <Link href="/" className="text-black">Home</Link>
           <Link href="/floors/floor-1" className="text-black">Rooms</Link>
-          <p onClick={scrollUser2} className="text-black inline-block">Services</p>
+         {visible && <p onClick={scrollUser2} className="text-black inline-block">Services</p>}
           <p onClick={scrollUser}  className="text-black inline-block">Contact Us</p>
           <Link href="/" className='bg-yellow-400 rounded-md px-4 py-2 font-bold text-white'>Book Online</Link>
         </Stack>

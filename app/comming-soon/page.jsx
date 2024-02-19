@@ -4,7 +4,7 @@ import { Container, Grid, Stack, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import AccomodationRoomCard from '../components/AccomodationRoomCard'
 import ContactComp from '../components/ContactComp'
-import BottomControll from '../components/BottomControll'
+
 
 const Page = () => {
     const [width, setWidth] = useState(0)
@@ -80,7 +80,7 @@ const Page = () => {
                 </Stack>
                
             </Container>
-            <Stack marginBottom={{xs:0,sm:"150px",md:"300px"}}></Stack>
+           
             <ContactComp visible={true}/>
             </div>
   )

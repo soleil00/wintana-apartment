@@ -136,11 +136,11 @@ const Page = ({ params }) => {
       <Stack display={{xs:"block",md:"none"}}>
       
         <BottomControll />
-        <BottomControll />
-        <BottomControll />
+        {/* <BottomControll />
+        <BottomControll /> */}
        
       </Stack>
-      <ContactComp visible={true} />
+      
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} fullWidth>
         <DialogTitle>Book your room with us today</DialogTitle>
         <DialogContent>
@@ -177,6 +177,7 @@ const Page = ({ params }) => {
           </Stack>
         </DialogContent>
       </Dialog>
+      <ContactComp visible={true} />
     </div>
   );
 };

@@ -20,9 +20,9 @@ import React from "react";
 const SportAndLeisure = () => {
   const imagePaths = [
     { path: "/bar.webp", service: "Bar restaurant",open:false },
-    { path: "/massage.jpeg", service: "Massage",open:false },
-    { path: "/sauna2.jpeg", service: "Sauna",open:false },
-    { path: "/sauna.webp", service: "Sauna & Massage",open:false },
+    { path: "/massage.jpeg", service: "Sauna & Massage",open:false },
+    { path: "/gym.jpg", service: "Gym",open:false },
+    { path: "/coffe.jpg", service: "Coffe Shop",open:false },
     { path: "/room3.jpeg", service: "Accomodation",open:true },
   ];
 

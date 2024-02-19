@@ -70,8 +70,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
     </Typography>
   ) }
 </Stack>
-
-      ) : (
+) : (
         <Stack>
           {selectedId === 0 ? (
                 <Typography>This is living big room , which located in apartment with 3 rooms, it contain with a big modern bed as you shown and
@@ -113,4 +112,3 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
 };
 
 export default DescriptionGenerator;
-

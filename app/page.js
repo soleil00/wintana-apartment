@@ -82,12 +82,12 @@ export default function Home() {
       <OurServices />
 
       {/* contact page */}
-      <BottomControll/>
-      <BottomControll/>
+      {/* <BottomControll/>
+      <BottomControll/> */}
       <Stack display={{xs:"block",md:"none"}}>
-        <BottomControll/>
+        {/* <BottomControll/>
       <BottomControll/>
-      <BottomControll/>
+      <BottomControll/> */}
       </Stack>
       <ContactComp visible={"soleil"} />
 
