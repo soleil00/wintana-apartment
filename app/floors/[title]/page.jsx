@@ -135,7 +135,7 @@ const Page = ({ params }) => {
           </Stack>
         </Stack>
         <h3 className="py-3">
-          Favorite Rooms from {goodTitle.replace(reg2, " ")}
+          Favorite Apartments from {goodTitle.replace(reg2, " ")}
         </h3>
         <Grid container spacing={2}>
           <AccomodationRoomCard
@@ -150,7 +150,7 @@ const Page = ({ params }) => {
             type={"residential"}
           />
           <AccomodationRoomCard
-            path={"/room2/2roomsalon2.jpg"}
+            path={"/room2/2roomdinning.jpg"}
             room={4}
             display={{ xs: 12, sm: 6, md: 4 }}
             title={"Apartment with 2 room"}

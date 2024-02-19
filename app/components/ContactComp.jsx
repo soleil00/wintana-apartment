@@ -59,7 +59,7 @@ function ContactComp({ visible }) {
   };
 
   return (
-    <div className="bg-gray-400 w-[100%] testing-mg mt-[30px]" id="contact">
+    <div className="bg-gray-400 w-[100%] testing-mg mt-[30px] cursor-pointer" id="contact">
       <Container className="max-w-[1224px] w-full mx-auto py-4 ">
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
@@ -147,6 +147,7 @@ function ContactComp({ visible }) {
                 label="Enter Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                
               />
               <TextField
                 fullWidth
