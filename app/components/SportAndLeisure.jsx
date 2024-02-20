@@ -22,7 +22,8 @@ const SportAndLeisure = () => {
     { path: "/bar.webp", service: "Bar restaurant",open:false },
     { path: "/massage.jpeg", service: "Sauna & Massage",open:false },
     { path: "/gym.jpg", service: "Gym",open:false },
-    { path: "/coffe.jpg", service: "Coffe Shop",open:false },
+    { path: "/poster.jfif", service: "Elevator",open:false },
+    { path: "/coffe.jpg", service: "Coffee Shop",open:false },
     { path: "/room3.jpeg", service: "Accomodation",open:true },
   ];
 

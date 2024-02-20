@@ -27,7 +27,7 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
             </Stack>
           ) : selectedId ===3 ? (
              <Typography>
-                    Experience ultimate comfort living room with smart bed,
+                    Experience ultimate comfort bedroom with smart bed,
                     complete with supportive mattress and soft linens.
                     Wardrobes are provided for convenient storage, ensuring a
                     sanctuary of relaxation and organization.
@@ -42,23 +42,23 @@ const DescriptionGenerator = ({ selectedId, id, setSelectedId }) => {
        <Stack>
   {selectedId === 0 ? (
     <Typography>
-      This is first living room in 2 rooms apartment, It is spacious and comfortable,this room include single bed, wardrobe for storage  and other furnished materials.
+      This is first bedroom in 2 rooms apartment, It is spacious and comfortable,this room include single bed, wardrobe for storage  and other furnished materials.
     </Typography>
   ) : selectedId === 1 ? (
     <Typography>
-      This is second living room. It offers cozy accommodation and is ideal for relaxationm including 1 bed alongside with wardrobe for stoarge too.
+      This is second bedroom. It offers cozy accommodation and is ideal for relaxationm including 1 bed alongside with wardrobe for stoarge too.
     </Typography>
   ) : selectedId === 2 ? (
     <Typography>
-      This is full bathroom, attached to first living room and It includes a toilet. making it private for first living room.
+      This is full bathroom, attached to first bedroom and It includes a toilet. making it private for first bedroom.
     </Typography>
   ) : selectedId === 3 ? (
     <Typography>
-      This is full bathroom, attached to second living room and It includes a toilet. making it private for second living room.
+      This is full bathroom, attached to second bedroom and It includes a toilet. making it private for second bedroom.
     </Typography>
   ) : selectedId === 4 ? (
     <Typography>
-      This is salon including nice sofa and dinning area, a shared by all living rooms. It&apos;s a comfortable space to relax and socialize.
+      This is salon including nice sofa and dinning area, a shared by all bedrooms. It&apos;s a comfortable space to relax and socialize.
     </Typography>
   ) : selectedId === 5? (
     <Typography>

@@ -99,7 +99,7 @@ const Page = ({ params }) => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src={"/retailer1.jpeg"}
+                  src={"/lift.webp"}
                   alt={`commerial hub`}
                   width={200}
                   height={300}
