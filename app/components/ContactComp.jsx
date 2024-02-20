@@ -107,8 +107,11 @@ function ContactComp({ visible }) {
             </Typography>
             <Stack justifyContent={"space-between"}>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
+                <Link href={"https://maps.app.goo.gl/bg6GrnvzT8oghb6K9"} className="flex gap-2 justify-center items-center">
+
                 <LocationOn color="secondary" fontSize="large" />
                 <Typography>Kg 452 st</Typography>
+                </Link>
               </Stack>
              
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
