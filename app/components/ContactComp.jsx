@@ -110,28 +110,38 @@ function ContactComp({ visible }) {
                 <LocationOn color="secondary" fontSize="large" />
                 <Typography>Kg 452 st</Typography>
               </Stack>
+             
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
-                <Instagram color="secondary" fontSize="large" />
-                <Typography>@wintan-apartment</Typography>
-              </Stack>
-              <Stack direction={"row"} spacing={2} alignContent={"center"}>
+                <Link href={"https://www.facebook.com/kibreth/"} className="flex gap-2 justify-center items-center">
+
                 <Facebook color="secondary" fontSize="large" />
                 <Typography>wintana</Typography>
+                </Link>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
                 <WhatsApp color="secondary" fontSize="large" />
                <a href="tel:0785612510">
-  <Typography>0785612510</Typography>
-</a>
+                  <Typography>0785612510</Typography>
+                </a>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
-                <Twitter color="secondary" fontSize="large" />
+                <Link href={"https://twitter.com"} className="flex gap-2 justify-center items-center">
+                  <Twitter color="secondary" fontSize="large" />
                 <Typography>@Wintana23</Typography>
+                </Link>
               </Stack>
               <Stack direction={"row"} spacing={2} alignContent={"center"}>
-                <Email color="secondary" fontSize="large" />
-                <Typography>sbhatuare@yahoo.com</Typography>
-              </Stack>
+                <Link href="mailto:Hazemo2223@gmail.com" className="flex gap-2 justify-center items-center">
+                  <Email color="secondary" fontSize="large"  />
+                  <Typography>Hazemo2223@gmail.com</Typography>
+                </Link>
+    </Stack>
+              <Stack direction={"row"} spacing={2} alignContent={"center"}>
+                <Link href="mailto:Sbhatuare@yahoo.com" className="flex gap-2 justify-center items-center">
+                  <Email color="secondary" fontSize="large"  />
+                  <Typography>Sbhatuare@yahoo.com</Typography>
+                </Link>
+    </Stack>
             </Stack>
           </Stack>
           {/* </div> */}
