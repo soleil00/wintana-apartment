@@ -89,6 +89,10 @@ function ContactComp({ visible }) {
                 features a comprehensive fitness and leisure center, including a
                 sauna, pool, fully equipped kitchen, and a stylish bar.
               </Typography>
+
+              <a href="tel:0790176547" className="mt-4">
+                <Typography>@StarLink Digital</Typography>
+              </a>
             </Stack>
           )}
 
