@@ -90,9 +90,7 @@ function ContactComp({ visible }) {
                 sauna, pool, fully equipped kitchen, and a stylish bar.
               </Typography>
 
-              <a href="tel:0790176547" className="mt-4">
-                <Typography>@StarLink Digital</Typography>
-              </a>
+            
             </Stack>
           )}
 
